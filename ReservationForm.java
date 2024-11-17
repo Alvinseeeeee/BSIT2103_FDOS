@@ -1,10 +1,11 @@
 package BSIT2103_FDOS;
 import javax.swing.SpinnerNumberModel;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseAdapter;
+import javax.swing.table.DefaultTableModel;
 
 public class ReservationForm extends javax.swing.JFrame {
 
+    private Calendar calendar;
+    
     public ReservationForm() {
         initComponents();
         
@@ -13,7 +14,10 @@ public class ReservationForm extends javax.swing.JFrame {
         int initialValue = 1;
         int stepSize = 1;
         SpinnerNumberModel model = new SpinnerNumberModel(initialValue, min, max, stepSize);
-        jSpinner1.setModel(model);
+        PartySizeSpinner.setModel(model);
+        
+        calendar = new Calendar();
+        updateCalendar();
     }
 
     /**
@@ -31,15 +35,17 @@ public class ReservationForm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jSpinner1 = new javax.swing.JSpinner();
+        PartySizeSpinner = new javax.swing.JSpinner();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         ReservationBackButton1 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        TimeSelector = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
+        SelectedDateDisplay = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        NextMonthButton = new javax.swing.JButton();
+        PreviousMonthButton = new javax.swing.JButton();
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
@@ -61,18 +67,6 @@ public class ReservationForm extends javax.swing.JFrame {
         jTable1.setAutoCreateRowSorter(true);
         jTable1.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
         jTable1.setForeground(new java.awt.Color(102, 0, 0));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"1", "2", "3", "4", "5", "6", "7"},
-                {"8", "9", "10", "11", "12", "13", "14"},
-                {"15", "16", "17", "18", "19", "20", "21"},
-                {"22", "23", "24", "25", "26", "27", "28"},
-                {"29", "30", "31", null, null, null, null}
-            },
-            new String [] {
-                "SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"
-            }
-        ));
         jTable1.setRowHeight(30);
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -100,11 +94,11 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
 
-        jComboBox1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30" }));
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+        TimeSelector.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        TimeSelector.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "5:00", "5:30", "6:00", "6:30", "7:00", "7:30", "8:00", "8:30", "9:00", "9:30" }));
+        TimeSelector.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
+                TimeSelectorActionPerformed(evt);
             }
         });
 
@@ -121,14 +115,31 @@ public class ReservationForm extends javax.swing.JFrame {
             }
         });
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        SelectedDateDisplay.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                SelectedDateDisplayActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
         jLabel4.setText("Selected Date");
+
+        NextMonthButton.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        NextMonthButton.setText(">");
+        NextMonthButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NextMonthButtonActionPerformed(evt);
+            }
+        });
+
+        PreviousMonthButton.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        PreviousMonthButton.setText("<");
+        PreviousMonthButton.setToolTipText("");
+        PreviousMonthButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PreviousMonthButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -140,12 +151,16 @@ public class ReservationForm extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(PreviousMonthButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addGap(6, 6, 6)
                                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(jLabel2))
-                                .addGap(113, 113, 113))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(NextMonthButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(86, 86, 86))
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 344, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 3, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -156,13 +171,13 @@ public class ReservationForm extends javax.swing.JFrame {
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(58, 58, 58))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(SelectedDateDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(TimeSelector, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(PartySizeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -178,7 +193,11 @@ public class ReservationForm extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(NextMonthButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(PreviousMonthButton, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -188,14 +207,14 @@ public class ReservationForm extends javax.swing.JFrame {
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(PartySizeSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(TimeSelector, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(SelectedDateDisplay, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(ReservationBackButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -206,15 +225,30 @@ public class ReservationForm extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void updateCalendar(){
+        String[] columns = {"SUN", "MON", "TUE", "WED", "THUR", "FRI", "SAT"};
+        DefaultTableModel model = new DefaultTableModel(columns, 0);
+        
+        int[][] days = calendar.getMonthDays();
+        for(int[]week : days){
+            Object[] row = new Object[7];
+            for(int i = 0; i < 7; i++){
+                row[i] = week[i] == 0 ? "" : week[i];
+            }
+            
+            model.addRow(row);
+        }
+        
+        jTable1.setModel(model);
+        jLabel3.setText(calendar.getMonthYear());
+    }
+    
     private void ReservationBackButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReservationBackButton1ActionPerformed
         EnterCustomerInformationForm firstform = new EnterCustomerInformationForm();
         
@@ -223,9 +257,9 @@ public class ReservationForm extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_ReservationBackButton1ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void TimeSelectorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TimeSelectorActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_TimeSelectorActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         ReviewReservationForm review = new ReviewReservationForm();
@@ -240,17 +274,27 @@ public class ReservationForm extends javax.swing.JFrame {
         if(row >= 0 && column >= 0){
             Object value = jTable1.getValueAt(row,column);
             if(value != null){
-               jTextField1.setText(value.toString());
+               SelectedDateDisplay.setText(value.toString());
             }
             else{
-                jTextField1.setText("No date selected.");
+                SelectedDateDisplay.setText("No date selected.");
             }
         }
     }//GEN-LAST:event_jTable1MouseClicked
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void SelectedDateDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectedDateDisplayActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_SelectedDateDisplayActionPerformed
+
+    private void NextMonthButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextMonthButtonActionPerformed
+        calendar.nextMonth();
+        updateCalendar();
+    }//GEN-LAST:event_NextMonthButtonActionPerformed
+
+    private void PreviousMonthButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PreviousMonthButtonActionPerformed
+        calendar.previousMonth();
+        updateCalendar();   
+    }//GEN-LAST:event_PreviousMonthButtonActionPerformed
 
     
     
@@ -290,9 +334,13 @@ public class ReservationForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton NextMonthButton;
+    private javax.swing.JSpinner PartySizeSpinner;
+    private javax.swing.JButton PreviousMonthButton;
     private javax.swing.JButton ReservationBackButton1;
+    private javax.swing.JTextField SelectedDateDisplay;
+    private javax.swing.JComboBox<String> TimeSelector;
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -302,8 +350,6 @@ public class ReservationForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
