@@ -4,7 +4,7 @@
  */
 package BSIT2103_FDOS;
 
-import Backend.Waiter;
+import BSIT2103_FDOS.BackEnd2.Waiter;
 
 public class DeleteWaiter extends javax.swing.JFrame {
 

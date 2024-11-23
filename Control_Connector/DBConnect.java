@@ -1,14 +1,13 @@
 package BSIT2103_FDOS.Control_Connector;
 import java.sql.*;
-import javax.swing.JOptionPane;
 
 public class DBConnect {
     private static Connection connect;
     private static DBConnect dbconnect;
     
-    private static String url= "jdbc:mysql://localhost:3306/bsit2103_fdos";
-    private static String user = "root";
-    private static String password = "";
+    private static final String url= "jdbc:mysql://localhost:3306/bsit2103_fdos";
+    private static final String user = "root";
+    private static final String password = "";
 
     public static Connection getConnect() {
         return connect;

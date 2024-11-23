@@ -108,11 +108,11 @@
                               <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="ManagementEmailField" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
-                                  <Component id="ManagementPasswordField" min="-2" pref="215" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="ManagementEmailField" alignment="0" pref="215" max="32767" attributes="0"/>
                                   <Component id="jLabel5" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
                                   <Component id="jLabel6" alignment="0" min="-2" pref="138" max="-2" attributes="0"/>
+                                  <Component id="ManagementPassword" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                           </Group>
@@ -137,7 +137,7 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="ManagementPasswordField" min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="ManagementPassword" min="-2" pref="25" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="LogInManagementButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace pref="15" max="32767" attributes="0"/>
@@ -158,8 +158,6 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="ManagementEmailField">
-            </Component>
-            <Component class="javax.swing.JTextField" name="ManagementPasswordField">
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel5">
               <Properties>
@@ -199,6 +197,11 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LogInManagementButtonActionPerformed"/>
               </Events>
+            </Component>
+            <Component class="javax.swing.JPasswordField" name="ManagementPassword">
+              <AccessibilityProperties>
+                <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
+              </AccessibilityProperties>
             </Component>
           </SubComponents>
         </Container>

@@ -4,8 +4,7 @@
  */
 package BSIT2103_FDOS;
 
-import Backend.CalendarTable;
-//import Backend.Customer;
+import BSIT2103_FDOS.BackEnd2.CalendarTable;
 import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.ArrayList;
@@ -15,7 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.table.DefaultTableModel;
-import Backend.Reservation;
+import BSIT2103_FDOS.BackEnd2.Reservation;
 import java.time.LocalTime;
 
 public class MainPageForm extends javax.swing.JFrame {
