@@ -1,6 +1,6 @@
 package BSIT2103_FDOS;
 
-import Backend.Waiter;
+import BSIT2103_FDOS.BackEnd2.Waiter;
 import java.util.List;
 import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
