@@ -77,7 +77,7 @@ public class SelectionMenu extends javax.swing.JFrame {
         jPanel4.setPreferredSize(new java.awt.Dimension(280, 230));
 
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        jTextArea1.setFont(new java.awt.Font("Century Gothic", 2, 9)); // NOI18N
         jTextArea1.setRows(5);
         jTextArea1.setText("\n\nFour-Course Prix Fixe Menu with Wine \nPairing \n\nExperience our exquisite four -  course \ndining journey, expertly crafted by our\nexecutive chef and paired with selected\nwines. Price: ₱7,500 per person ( include\nwine pairing )\n\n\n       Click the Fixe Prie For More Details.");
         jTextArea1.setMinimumSize(new java.awt.Dimension(185, 94));
@@ -85,7 +85,7 @@ public class SelectionMenu extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea1);
 
         jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Century Gothic", 0, 9)); // NOI18N
+        jTextArea2.setFont(new java.awt.Font("Century Gothic", 2, 9)); // NOI18N
         jTextArea2.setRows(5);
         jTextArea2.setText("\nAPPETIZERS: (Foie Gras, French Onion \nSoup, Bone Marrow, Sea Scallop, ...)\n\nENTREE: (Vegetarian Risotto, Wagyu Beef,\nPenne Vodka, ... )\n\nDESSERTS: (Crème Brûlée, Tiramisu, Lemon\nTart, Panna Cotta, ...)\n\nBEVERAGES: (Barolo Piemonte, Sancerre\nLoire Valley, House-Made Iced Tea,\nMojito,  ...)\n\n      Click the A LA Carte For More Details.");
         jTextArea2.setMinimumSize(new java.awt.Dimension(185, 94));
@@ -109,15 +109,15 @@ public class SelectionMenu extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap(14, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jScrollPane2)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,7 +153,7 @@ public class SelectionMenu extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 263, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();

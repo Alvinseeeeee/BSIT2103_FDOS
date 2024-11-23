@@ -58,7 +58,7 @@
               <Component id="jLabel1" min="-2" pref="25" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jPanel4" min="-2" pref="263" max="-2" attributes="0"/>
-              <EmptySpace pref="16" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -135,17 +135,17 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace pref="14" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton2" alignment="1" min="-2" pref="215" max="-2" attributes="0"/>
-                      <Component id="jScrollPane3" alignment="1" min="-2" pref="215" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="jScrollPane2" max="32767" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="215" max="-2" attributes="0"/>
+                      <Component id="jButton2" max="32767" attributes="0"/>
+                      <Component id="jScrollPane3" pref="215" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                  <EmptySpace pref="26" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jScrollPane2" pref="215" max="32767" attributes="0"/>
+                      <Component id="jButton1" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -179,7 +179,7 @@
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Century Gothic" size="10" style="0"/>
+                  <Font name="Century Gothic" size="9" style="2"/>
                 </Property>
                 <Property name="rows" type="int" value="5"/>
                 <Property name="text" type="java.lang.String" value="&#xa;&#xa;Four-Course Prix Fixe Menu with Wine &#xa;Pairing &#xa;&#xa;Experience our exquisite four -  course &#xa;dining journey, expertly crafted by our&#xa;executive chef and paired with selected&#xa;wines. Price: &#x20b1;7,500 per person ( include&#xa;wine pairing )&#xa;&#xa;&#xa;       Click the Fixe Prie For More Details."/>
@@ -204,7 +204,7 @@
               <Properties>
                 <Property name="columns" type="int" value="20"/>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Century Gothic" size="9" style="0"/>
+                  <Font name="Century Gothic" size="9" style="2"/>
                 </Property>
                 <Property name="rows" type="int" value="5"/>
                 <Property name="text" type="java.lang.String" value="&#xa;APPETIZERS: (Foie Gras, French Onion &#xa;Soup, Bone Marrow, Sea Scallop, ...)&#xa;&#xa;ENTREE: (Vegetarian Risotto, Wagyu Beef,&#xa;Penne Vodka, ... )&#xa;&#xa;DESSERTS: (Cr&#xe8;me Br&#xfb;l&#xe9;e, Tiramisu, Lemon&#xa;Tart, Panna Cotta, ...)&#xa;&#xa;BEVERAGES: (Barolo Piemonte, Sancerre&#xa;Loire Valley, House-Made Iced Tea,&#xa;Mojito,  ...)&#xa;&#xa;      Click the A LA Carte For More Details."/>
