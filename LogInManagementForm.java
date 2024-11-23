@@ -30,10 +30,10 @@ public class LogInManagementForm extends javax.swing.JFrame {
         jPanel4 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         ManagementEmailField = new javax.swing.JTextField();
-        ManagementPasswordField = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         LogInManagementButton = new javax.swing.JButton();
+        ManagementPassword = new javax.swing.JPasswordField();
         jLabel8 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
@@ -81,11 +81,11 @@ public class LogInManagementForm extends javax.swing.JFrame {
                         .addComponent(jLabel7)
                         .addGap(15, 15, 15))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ManagementEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ManagementPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(ManagementEmailField, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ManagementPassword))
                         .addGap(39, 39, 39))))
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(110, 110, 110)
@@ -104,11 +104,13 @@ public class LogInManagementForm extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ManagementPasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(ManagementPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(LogInManagementButton)
                 .addContainerGap(15, Short.MAX_VALUE))
         );
+
+        ManagementPassword.getAccessibleContext().setAccessibleDescription("");
 
         jLabel8.setFont(new java.awt.Font("Lucida Fax", 0, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(100, 75, 57));
@@ -167,14 +169,14 @@ public class LogInManagementForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LogInManagementButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogInManagementButtonActionPerformed
-        // TODO add your handling code here:
+        ManagementPageForm management = new ManagementPageForm();
+        management.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_LogInManagementButtonActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        EnterCustomerInformationForm firstform = new EnterCustomerInformationForm();
-        
-        firstform.setVisible(true);
-        
+        MainPageForm mainpage = new MainPageForm();
+        mainpage.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -216,7 +218,7 @@ public class LogInManagementForm extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LogInManagementButton;
     private javax.swing.JTextField ManagementEmailField;
-    private javax.swing.JTextField ManagementPasswordField;
+    private javax.swing.JPasswordField ManagementPassword;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
