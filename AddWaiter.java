@@ -8,8 +8,8 @@ import BSIT2103_FDOS.BackEnd2.Waiter;
 
 public class AddWaiter extends javax.swing.JFrame {
 
-    Waiter waiter = new Waiter();
-    
+    private Waiter waiter;
+
     public AddWaiter() {
         initComponents();
     }
@@ -122,6 +122,10 @@ public class AddWaiter extends javax.swing.JFrame {
     }//GEN-LAST:event_WaiterNameFieldActionPerformed
 
     private void AddWaiterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddWaiterButtonActionPerformed
+        
+        Waiter waiter = new Waiter();
+        this.waiter = waiter;
+    
         String waiterName = WaiterNameField.getText();
         
         waiter.enterWaiter(waiterName);

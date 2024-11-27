@@ -1,10 +1,9 @@
 package BSIT2103_FDOS;
 import BSIT2103_FDOS.BackEnd2.Reservation;
+import BSIT2103_FDOS.BackEnd2.SharedData;
 import javax.swing.JOptionPane;
 
 public class VerifyReservationDetails extends javax.swing.JFrame {
-
-    Reservation reservation = new Reservation();
     
     public VerifyReservationDetails() {
         initComponents();
@@ -18,8 +17,8 @@ public class VerifyReservationDetails extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         ReservationIDField = new javax.swing.JTextField();
         EnterIDButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,6 +39,9 @@ public class VerifyReservationDetails extends javax.swing.JFrame {
             }
         });
 
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jLabel2.setText("ENTER YOUR RESERVATION ID");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -51,13 +53,16 @@ public class VerifyReservationDetails extends javax.swing.JFrame {
                         .addComponent(ReservationIDField, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(119, 119, 119)
-                        .addComponent(EnterIDButton)))
+                        .addComponent(EnterIDButton))
+                    .addComponent(jLabel2))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
                 .addComponent(ReservationIDField, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(EnterIDButton)
@@ -67,10 +72,6 @@ public class VerifyReservationDetails extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("VERIFY YOUR RESERVATION");
-
-        jLabel2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("ENTER YOUR RESERVATION ID");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -82,9 +83,7 @@ public class VerifyReservationDetails extends javax.swing.JFrame {
                 .addGap(80, 80, 80))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(42, 42, 42)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -92,9 +91,7 @@ public class VerifyReservationDetails extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(55, 55, 55)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(51, Short.MAX_VALUE))
         );
@@ -118,6 +115,9 @@ public class VerifyReservationDetails extends javax.swing.JFrame {
     }//GEN-LAST:event_ReservationIDFieldActionPerformed
 
     private void EnterIDButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterIDButtonActionPerformed
+        
+        Reservation reservation = new Reservation();
+        
         String input = ReservationIDField.getText().trim();
 
         if (!input.matches("\\d+")) {
@@ -131,7 +131,26 @@ public class VerifyReservationDetails extends javax.swing.JFrame {
         }   
 
         int reservationID = Integer.parseInt(input);
-        reservation.verifyReservation(reservationID);
+        
+        boolean isVerified = reservation.verifyReservation(reservationID);
+
+        if (isVerified) {
+
+            SharedData.reservationID = reservationID;
+            SharedData.customerID = reservation.getCustomerID(reservationID);
+            ReservationState.verifiedID = reservationID; // Store verified ID in AppState
+            ReservationState.isVerified = true; 
+            JOptionPane.showMessageDialog(this, "Reservation Verified! Moving to options.");
+            new ReservationOptions().setVisible(true);
+            this.dispose(); // Close the current form
+        } else {
+            JOptionPane.showMessageDialog(
+                null,
+                "Reservation not found! Please try again.",
+                "Error",
+                JOptionPane.WARNING_MESSAGE
+            );
+        }
     }//GEN-LAST:event_EnterIDButtonActionPerformed
 
     /**

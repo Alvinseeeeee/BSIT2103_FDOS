@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import BSIT2103_FDOS.Control_Connector.DBConnect;
 import BSIT2103_FDOS.DeleteWaiter;
 import BSIT2103_FDOS.ManagementPageForm;
+import javax.swing.JTable;
 
 public class Waiter {
     private Connection connect;
@@ -152,28 +153,90 @@ public class Waiter {
             }
         }
     }
-
     
-    public List<Object[]>getWaitersWithTables(){
-        List<Object[]> waiterTableData = new ArrayList<>();
+    public List<Object[]> getWaitersWithTables() {
+    List<Object[]> waiterTableData = new ArrayList<>();
+    System.out.println("Connecting to database...");
 
-        String waiterAndTableQuery = "SELECT w.waiter_id, w.waiter_name, t.table_id FROM waiters AS w JOIN tables AS t ON w.waiter_id = t.waiter_id"; 
+    String sql = "SELECT w.waiter_id, w.waiter_name, t.table_id " +
+                 "FROM waiters AS w " +
+                 "JOIN tables AS t ON w.waiter_id = t.waiter_id";
 
-        try(Statement stmt = connect.createStatement();
-             ResultSet rs = stmt.executeQuery(waiterAndTableQuery)) {
+    try (Statement stmt = connect.createStatement();
+         ResultSet rs = stmt.executeQuery(sql)) {
 
-            while(rs.next()){
-                int waiterId = rs.getInt("w.waiter_id");
-                String waiterName = rs.getString("w.waiter_name");
-                int tableId = rs.getInt("t.table_id");
+        System.out.println("Executing query: " + sql);
 
-                waiterTableData.add(new Object[]{waiterId, waiterName, tableId});
-            }
-        } 
-        catch(SQLException e){
-            e.printStackTrace();
+        while (rs.next()) {
+            int waiterId = rs.getInt("waiter_id");
+            String waiterName = rs.getString("waiter_name");
+            int tableId = rs.getInt("table_id");
+
+            System.out.printf("Retrieved row: %d, %s, %d%n", waiterId, waiterName, tableId);
+            waiterTableData.add(new Object[]{waiterId, waiterName, tableId});
         }
-        return waiterTableData;
+
+    } catch (SQLException e) {
+        System.err.println("Error executing query: " + e.getMessage());
+        e.printStackTrace();
+    }
+
+    return waiterTableData;
 }
 
+    
+    /*public List<Object[]> getWaitersWithTables() {
+    List<Object[]> waiterTableData = new ArrayList<>();
+
+    String sql = "SELECT w.waiter_id, w.waiter_name, t.table_id " +
+                 "FROM waiters AS w " +
+                 "JOIN tables AS t ON w.waiter_id = t.waiter_id"; 
+
+    try (Statement stmt = connect.createStatement();
+         ResultSet rs = stmt.executeQuery(sql)) {
+
+        while (rs.next()) {
+            int waiterId = rs.getInt("w.waiter_id");
+            String waiterName = rs.getString("w.waiter_name");
+            int tableId = rs.getInt("t.table_id");
+
+            waiterTableData.add(new Object[]{waiterId, waiterName, tableId});
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return waiterTableData;
+}*/
+
+    /*
+    public class WaitstaffTableDisplay {
+
+        public List<Object[]> getWaitersWithTables() {
+            List<Object[]> waiterTableData = new ArrayList<>();
+
+            String waiterAndTableQuery = "SELECT w.waiter_id, w.waiter_name, t.table_id " +
+               "FROM waiters AS w " +
+               "LEFT JOIN tables AS t ON w.waiter_id = t.waiter_id";
+
+            try (Statement stmt = connect.createStatement();
+                 ResultSet rs = stmt.executeQuery(waiterAndTableQuery)) {
+                
+                while (rs.next()) {
+                    int waiterId = rs.getInt("w.waiter_id");
+                    String waiterName = rs.getString("w.waiter_name");
+                    int tableId = rs.getInt("t.table_id");
+                    
+                    System.out.println("Retrieved: Waiter ID = " + waiterId + ", Waiter Name = " + waiterName + ", Table ID = " + tableId);
+
+                    waiterTableData.add(new Object[]{waiterId, waiterName, tableId});
+                }
+            } catch (SQLException e) {
+                System.err.println("Error executing query: " + e.getMessage());
+                e.printStackTrace();
+            }
+
+            return waiterTableData;
+        }
+
+    }*/
 }
