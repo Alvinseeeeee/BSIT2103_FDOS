@@ -8,7 +8,7 @@ import BSIT2103_FDOS.BackEnd2.Waiter;
 
 public class DeleteWaiter extends javax.swing.JFrame {
 
-    Waiter waiter = new Waiter();
+    private Waiter waiter;
     
     public DeleteWaiter() {
         initComponents();
@@ -126,6 +126,9 @@ public class DeleteWaiter extends javax.swing.JFrame {
     }//GEN-LAST:event_WaiterIDFieldActionPerformed
 
     private void DeleteWaiterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteWaiterButtonActionPerformed
+        Waiter waiter = new Waiter();
+        this.waiter = waiter;
+        
         String waiterIDText = WaiterIDField.getText();
 
         int waiterID = Integer.parseInt(waiterIDText);

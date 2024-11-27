@@ -15,16 +15,17 @@ import javax.swing.JOptionPane;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.table.DefaultTableModel;
 import BSIT2103_FDOS.BackEnd2.Reservation;
+import BSIT2103_FDOS.BackEnd2.WalkIn;
+import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class MainPageForm extends javax.swing.JFrame {
 
     Reservation reservation = new Reservation();
+    WalkIn walkin = new WalkIn();
     private CalendarTable calendar;
     //Customer customer = new Customer();
-    String fullName;
-    String email;
-    String contactNo;
     
     public MainPageForm() {
         initComponents();
@@ -35,6 +36,7 @@ public class MainPageForm extends javax.swing.JFrame {
         int stepSize = 1;
         SpinnerNumberModel model = new SpinnerNumberModel(initialValue, min, max, stepSize);
         PartySizeSpinner.setModel(model);
+        WalkInPartySize.setModel(model);
         
         calendar = new CalendarTable();
         updateCalendar();
@@ -54,6 +56,8 @@ public class MainPageForm extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel4 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
@@ -67,6 +71,13 @@ public class MainPageForm extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         WalkInPartySize = new javax.swing.JSpinner();
         WalkInEndTime = new javax.swing.JComboBox<>();
+        WalkInDate = new javax.swing.JTextField();
+        WalkInStartTime = new javax.swing.JTextField();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
         customerEnter = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
@@ -120,26 +131,51 @@ public class MainPageForm extends javax.swing.JFrame {
         });
 
         jLabel20.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-139x309.jpg"))); // NOI18N
+
+        jLabel21.setFont(new java.awt.Font("Lucida Fax", 0, 10)); // NOI18N
+        jLabel21.setText("\"Elevating taste,");
+
+        jLabel22.setFont(new java.awt.Font("Lucida Fax", 0, 10)); // NOI18N
+        jLabel22.setText("redefining elegance.\" ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2))
-                    .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(21, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addComponent(jLabel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(21, 21, 21)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(jLabel15)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jButton2))))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel21)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel22)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -202,32 +238,76 @@ public class MainPageForm extends javax.swing.JFrame {
             }
         });
 
+        WalkInDate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WalkInDateActionPerformed(evt);
+            }
+        });
+
+        WalkInStartTime.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WalkInStartTimeActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        jLabel23.setText("Walk-In Date");
+
+        jLabel24.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        jLabel24.setText("Start Time");
+
+        jLabel25.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        jLabel25.setText("End Time");
+
+        jLabel26.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        jLabel26.setText("No need to fill up");
+
+        jLabel27.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        jLabel27.setText("No need to fill up");
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(67, Short.MAX_VALUE)
+                .addContainerGap(12, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(CustomerInformation)
-                    .addComponent(EmailAddressLabel)
-                    .addComponent(ContactNumberLabel)
-                    .addComponent(customerContactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(customerFullNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(customerEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FullNameLabel))
-                .addGap(64, 64, 64))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(WalkInPartySize, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(WalkInEndTime, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(36, 36, 36))))
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(WalkInPartySize, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel7Layout.createSequentialGroup()
+                                    .addGap(55, 55, 55)
+                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(CustomerInformation)
+                                        .addComponent(EmailAddressLabel)
+                                        .addComponent(ContactNumberLabel)
+                                        .addComponent(customerContactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(customerFullNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(customerEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(FullNameLabel))))
+                            .addGap(64, 64, 64))
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(WalkInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGap(18, 18, 18)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel7Layout.createSequentialGroup()
+                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                            .addComponent(WalkInStartTime)
+                                            .addGap(18, 18, 18))
+                                        .addGroup(jPanel7Layout.createSequentialGroup()
+                                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addGap(40, 40, 40)))
+                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(WalkInEndTime, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addContainerGap()))))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -246,13 +326,25 @@ public class MainPageForm extends javax.swing.JFrame {
                 .addComponent(ContactNumberLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(customerContactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(8, 8, 8)
                 .addComponent(jLabel17)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(WalkInPartySize, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(WalkInPartySize, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(WalkInEndTime, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(14, 14, 14))
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel25))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(WalkInEndTime, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WalkInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(WalkInStartTime, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel27))
+                .addContainerGap())
         );
 
         customerEnter.setBackground(new java.awt.Color(228, 224, 225));
@@ -297,10 +389,10 @@ public class MainPageForm extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(customerEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("WALK IN", jPanel4);
@@ -590,7 +682,7 @@ public class MainPageForm extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(40, Short.MAX_VALUE)
                 .addComponent(ReservationHandlingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
@@ -630,9 +722,7 @@ public class MainPageForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -665,11 +755,11 @@ public class MainPageForm extends javax.swing.JFrame {
         SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
         Calendar cal = Calendar.getInstance();
         
-        cal.set(Calendar.HOUR_OF_DAY, 17);
+        cal.set(Calendar.HOUR_OF_DAY, 0);
         cal.set(Calendar.MINUTE, 0);
         cal.set(Calendar.SECOND, 0);
         
-        for(int i = 0; i <= 9; i++){
+        for(int i = 0; i <= 48; i++){
             validTimeoptions.add(timeFormat.format(cal.getTime()));
             cal.add(Calendar.MINUTE,30);
         }
@@ -685,16 +775,24 @@ public class MainPageForm extends javax.swing.JFrame {
     }//GEN-LAST:event_ReservationStartTimeActionPerformed
 
     private void EnterReservationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EnterReservationButtonActionPerformed
-        fullName = FullNameField.getText();
-        email = EmailField.getText();
-        contactNo = ContactNoField.getText();
+        String reservationfullName = FullNameField.getText();
+        String reservationemail = EmailField.getText();
+        String reservationcontactNo = ContactNoField.getText();
         String startTime = ReservationStartTime.getSelectedItem().toString();
         String endTime = ReservationEndTime.getSelectedItem().toString();
         String partySize = PartySizeSpinner.getValue().toString();
         
         String selectedDate = SelectedDateDisplay.getText();
         
-        reservation.reservationCustomer(fullName, email, contactNo, startTime, endTime, selectedDate, partySize);
+        reservation.reservationCustomer(reservationfullName, reservationemail, reservationcontactNo, startTime, endTime, selectedDate, partySize);
+
+        FullNameField.setText("");
+        EmailField.setText("");
+        ContactNoField.setText("");
+        ReservationStartTime.setSelectedIndex(0); 
+        ReservationEndTime.setSelectedIndex(0); 
+        PartySizeSpinner.setValue(1); 
+        SelectedDateDisplay.setText("");
     }//GEN-LAST:event_EnterReservationButtonActionPerformed
 
     private void SelectedDateDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SelectedDateDisplayActionPerformed
@@ -703,44 +801,44 @@ public class MainPageForm extends javax.swing.JFrame {
 
     private void CalendarForReservationMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CalendarForReservationMouseClicked
         int row = CalendarForReservation.rowAtPoint(evt.getPoint());
-    int column = CalendarForReservation.columnAtPoint(evt.getPoint());
+        int column = CalendarForReservation.columnAtPoint(evt.getPoint());
 
-    if (row >= 0 && column >= 0) {
-        Object value = CalendarForReservation.getValueAt(row, column);
-        if (value != null) {
-            int day = (int) value;
+        if (row >= 0 && column >= 0) {
+            Object value = CalendarForReservation.getValueAt(row, column);
+            if (value != null) {
+                int day = (int) value;
 
-            String currentMonthYear = calendar.getMonthYear();
-            String[] monthYearParts = currentMonthYear.split(" "); 
-            String month = monthYearParts[0];
-            String year = monthYearParts[1];
+                String currentMonthYear = calendar.getMonthYear();
+                String[] monthYearParts = currentMonthYear.split(" "); 
+                String month = monthYearParts[0];
+                String year = monthYearParts[1];
 
-            int monthNumber = getMonthNumber(month); 
+                int monthNumber = getMonthNumber(month); 
 
-            String formattedDate = String.format("%04d-%02d-%02d", Integer.parseInt(year), monthNumber, day);
-            SelectedDateDisplay.setText(formattedDate);
-        } else {
-            SelectedDateDisplay.setText("No date selected.");
+                String formattedDate = String.format("%04d-%02d-%02d", Integer.parseInt(year), monthNumber, day);
+                SelectedDateDisplay.setText(formattedDate);
+            } else {
+                SelectedDateDisplay.setText("No date selected.");
+            }
         }
     }
-}
 
-private int getMonthNumber(String month) {
-    switch (month.toLowerCase()) {
-        case "january": return 1;
-        case "february": return 2;
-        case "march": return 3;
-        case "april": return 4;
-        case "may": return 5;
-        case "june": return 6;
-        case "july": return 7;
-        case "august": return 8;
-        case "september": return 9;
-        case "october": return 10;
-        case "november": return 11;
-        case "december": return 12;
-        default: return 0;
-    }
+    private int getMonthNumber(String month) {
+        switch (month.toLowerCase()) {
+            case "january": return 1;
+            case "february": return 2;
+            case "march": return 3;
+            case "april": return 4;
+            case "may": return 5;
+            case "june": return 6;
+            case "july": return 7;
+            case "august": return 8;
+            case "september": return 9;
+            case "october": return 10;
+            case "november": return 11;
+            case "december": return 12;
+            default: return 0;
+        }
     }//GEN-LAST:event_CalendarForReservationMouseClicked
 
     private void NextMonthButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NextMonthButtonActionPerformed
@@ -773,25 +871,47 @@ private int getMonthNumber(String month) {
         // TODO add your handling code here:
     }//GEN-LAST:event_customerContactNoFieldActionPerformed
 
+    
+    // Constructor or form initialization
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {    
+        LocalDate currentDate = LocalDate.now();
+        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");  // Format as "yyyy-MM-dd"
+        String formattedDate = currentDate.format(dateFormatter);
+
+        WalkInDate.setText(formattedDate);
+
+        LocalTime currentTime = LocalTime.now();
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+        String formattedTime = currentTime.format(timeFormatter);
+
+        WalkInStartTime.setText(formattedTime);
+    }
+
+    
     private void customerEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerEnterActionPerformed
-        fullName = FullNameField.getText();
-        email = EmailField.getText();
-        contactNo = ContactNoField.getText();
+        String WalkInfullName = customerFullNameField.getText();
+        String WalkInemail = customerEmailField.getText();
+        String WalkIncontactNo = customerContactNoField.getText();
         String startTime = ReservationStartTime.getSelectedItem().toString();
         String endTime = ReservationEndTime.getSelectedItem().toString();
         String partySize = WalkInPartySize.getValue().toString();
 
-        String selectedDate = SelectedDateDisplay.getText();
+        String selectedDate = WalkInDate.getText();  
+        String timeVariable = WalkInStartTime.getText();
+
         LocalTime currentTime = LocalTime.now();
-        LocalTime openTime = LocalTime.of(17, 0);
-        LocalTime closeTime = LocalTime.of(21, 30); 
+        LocalTime openTime = LocalTime.of(0, 0);
+        LocalTime closeTime = LocalTime.of(23, 59); 
 
         if (currentTime.isBefore(openTime) || currentTime.isAfter(closeTime)) {
             JOptionPane.showMessageDialog(null, "Reservations can only be made between 5:00 PM and 9:30 PM.", "Reservation Hours", JOptionPane.WARNING_MESSAGE);
             return; 
         }
 
-        reservation.reservationCustomer(fullName, email, contactNo, startTime, endTime, selectedDate, partySize);
+        walkin.walkInCustomer(WalkInfullName, WalkInemail, WalkIncontactNo, startTime, endTime, selectedDate, partySize);
+        Menu menu = new Menu();
+        menu.setVisible(true);
+        this.dispose();
 
     }//GEN-LAST:event_customerEnterActionPerformed
 
@@ -810,8 +930,19 @@ private int getMonthNumber(String month) {
     }//GEN-LAST:event_WalkInEndTimeActionPerformed
 
     private void AlreadyReservedButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlreadyReservedButtonActionPerformed
-        // TODO add your handling code here:
+        VerifyReservationDetails verify = new VerifyReservationDetails();
+        
+        verify.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_AlreadyReservedButtonActionPerformed
+
+    private void WalkInDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WalkInDateActionPerformed
+
+    }//GEN-LAST:event_WalkInDateActionPerformed
+
+    private void WalkInStartTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WalkInStartTimeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_WalkInStartTimeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -866,8 +997,10 @@ private int getMonthNumber(String month) {
     private javax.swing.JPanel ReservationHandlingPanel;
     private javax.swing.JComboBox<String> ReservationStartTime;
     private javax.swing.JTextField SelectedDateDisplay;
+    private javax.swing.JTextField WalkInDate;
     private javax.swing.JComboBox<String> WalkInEndTime;
     private javax.swing.JSpinner WalkInPartySize;
+    private javax.swing.JTextField WalkInStartTime;
     private javax.swing.JTextField customerContactNoField;
     private javax.swing.JTextField customerEmailField;
     private javax.swing.JButton customerEnter;
@@ -886,6 +1019,13 @@ private int getMonthNumber(String month) {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -902,4 +1042,8 @@ private int getMonthNumber(String month) {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
+
+    private void setVisible() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

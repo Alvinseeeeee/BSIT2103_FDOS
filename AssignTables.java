@@ -232,9 +232,9 @@ public class AssignTables extends javax.swing.JFrame {
 
     private void populateTableList() {
     try {
-        String query = "SELECT table_id, capacity FROM tables WHERE waiter_id IS NULL"; // Only available tables
+        String populateTableListQuery = "SELECT table_id, capacity FROM tables WHERE waiter_id IS NULL"; //Only available tables
         Statement stmt = connect.createStatement();
-        ResultSet rs = stmt.executeQuery(query);
+        ResultSet rs = stmt.executeQuery(populateTableListQuery);
 
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
