@@ -19,6 +19,7 @@ import java.sql.SQLException;
 import java.sql.Types;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import javax.swing.SpinnerNumberModel;
 
 /**
  *
@@ -42,6 +43,33 @@ public class Menu extends javax.swing.JFrame {
         this.customerID = SharedData.customerID;      // Get the customer ID from AppState
         this.reservationID = SharedData.reservationID;
         entryTime = LocalDateTime.now();
+        
+        int min = 1;
+        int max = 10;
+        int initialValue = 1;
+        int stepSize = 1;
+        SpinnerNumberModel model = new SpinnerNumberModel(initialValue, min, max, stepSize);
+        Appetizer1Spinner.setModel(model);
+        AppetizerSpinner2.setModel(model);
+        AppetizerSpinner3.setModel(model);
+        AppetizerSpinner4.setModel(model);
+        AppetizerSpinner5.setModel(model);
+        EntreeSpinner1.setModel(model);
+        EntreeSpinner2.setModel(model);
+        EntreeSpinner3.setModel(model);
+        EntreeSpinner4.setModel(model);
+        EntreeSpinner5.setModel(model);
+        DessertSpinner1.setModel(model);
+        DessertSpinner2.setModel(model);
+        DessertSpinner3.setModel(model);
+        DessertSpinner4.setModel(model);
+        DessertSpinner5.setModel(model);
+        BeverageSpinner1.setModel(model);
+        BeverageSpinner2.setModel(model);
+        BeverageSpinner3.setModel(model);
+        BeverageSpinner4.setModel(model);
+        BeverageSpinner5.setModel(model);
+        FixePrieSpinner.setModel(model);
     }
 
     /**
@@ -62,36 +90,37 @@ public class Menu extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         EscargotButton = new javax.swing.JButton();
-        EscargotField = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
+        AppetizerSpinner5 = new javax.swing.JSpinner();
         jPanel15 = new javax.swing.JPanel();
         jLabel33 = new javax.swing.JLabel();
         jLabel34 = new javax.swing.JLabel();
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         MarrowButton = new javax.swing.JButton();
-        BoneMarrowField = new javax.swing.JTextField();
+        Appetizer1Spinner = new javax.swing.JSpinner();
         jPanel16 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
         QuinoaButton = new javax.swing.JButton();
-        QuinoaSaladField = new javax.swing.JTextField();
+        AppetizerSpinner3 = new javax.swing.JSpinner();
         jPanel17 = new javax.swing.JPanel();
         jLabel39 = new javax.swing.JLabel();
         jLabel40 = new javax.swing.JLabel();
         jLabel41 = new javax.swing.JLabel();
         jLabel42 = new javax.swing.JLabel();
         ScallopsButton = new javax.swing.JButton();
-        ScallopField = new javax.swing.JTextField();
+        AppetizerSpinner2 = new javax.swing.JSpinner();
         jPanel18 = new javax.swing.JPanel();
         jLabel43 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
         TartareButton = new javax.swing.JButton();
-        TartareField = new javax.swing.JTextField();
+        AppetizerSpinner4 = new javax.swing.JSpinner();
+        jSpinner1 = new javax.swing.JSpinner();
         jPanel4 = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
         jLabel52 = new javax.swing.JLabel();
@@ -99,35 +128,35 @@ public class Menu extends javax.swing.JFrame {
         jLabel54 = new javax.swing.JLabel();
         jLabel55 = new javax.swing.JLabel();
         MusselsButton = new javax.swing.JButton();
-        MusselsField = new javax.swing.JTextField();
+        EntreeSpinner1 = new javax.swing.JSpinner();
         jPanel21 = new javax.swing.JPanel();
         jLabel56 = new javax.swing.JLabel();
         jLabel57 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
         jLabel59 = new javax.swing.JLabel();
         TomahawkButton = new javax.swing.JButton();
-        TomahawkField = new javax.swing.JTextField();
+        EntreeSpinner3 = new javax.swing.JSpinner();
         jPanel22 = new javax.swing.JPanel();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
         jLabel62 = new javax.swing.JLabel();
         jLabel63 = new javax.swing.JLabel();
         PenneVodkaButton = new javax.swing.JButton();
-        PenneVodkaField = new javax.swing.JTextField();
+        EntreeSpinner2 = new javax.swing.JSpinner();
         jPanel23 = new javax.swing.JPanel();
         jLabel64 = new javax.swing.JLabel();
         jLabel65 = new javax.swing.JLabel();
         jLabel66 = new javax.swing.JLabel();
         jLabel67 = new javax.swing.JLabel();
         GallianoButton = new javax.swing.JButton();
-        GallianoField = new javax.swing.JTextField();
+        EntreeSpinner4 = new javax.swing.JSpinner();
         jPanel24 = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
         jLabel69 = new javax.swing.JLabel();
         jLabel70 = new javax.swing.JLabel();
         jLabel71 = new javax.swing.JLabel();
         SalmonButton = new javax.swing.JButton();
-        SalmonField = new javax.swing.JTextField();
+        EntreeSpinner5 = new javax.swing.JSpinner();
         jPanel5 = new javax.swing.JPanel();
         jPanel25 = new javax.swing.JPanel();
         jLabel72 = new javax.swing.JLabel();
@@ -135,35 +164,35 @@ public class Menu extends javax.swing.JFrame {
         jLabel74 = new javax.swing.JLabel();
         jLabel75 = new javax.swing.JLabel();
         CremeBruleeButton = new javax.swing.JButton();
-        CremeBruleeField = new javax.swing.JTextField();
+        DessertSpinner1 = new javax.swing.JSpinner();
         jPanel26 = new javax.swing.JPanel();
         jLabel76 = new javax.swing.JLabel();
         jLabel77 = new javax.swing.JLabel();
         jLabel78 = new javax.swing.JLabel();
         jLabel79 = new javax.swing.JLabel();
         ProfiterolesButton = new javax.swing.JButton();
-        Profiteroles = new javax.swing.JTextField();
+        DessertSpinner2 = new javax.swing.JSpinner();
         jPanel27 = new javax.swing.JPanel();
         jLabel80 = new javax.swing.JLabel();
         jLabel81 = new javax.swing.JLabel();
         jLabel82 = new javax.swing.JLabel();
         jLabel83 = new javax.swing.JLabel();
         TiramisuButton = new javax.swing.JButton();
-        TiramisuField = new javax.swing.JTextField();
+        DessertSpinner4 = new javax.swing.JSpinner();
         jPanel28 = new javax.swing.JPanel();
         jLabel84 = new javax.swing.JLabel();
         jLabel85 = new javax.swing.JLabel();
         jLabel86 = new javax.swing.JLabel();
         jLabel87 = new javax.swing.JLabel();
         PavlovaButton = new javax.swing.JButton();
-        PavlovaField = new javax.swing.JTextField();
+        DessertSpinner3 = new javax.swing.JSpinner();
         jPanel29 = new javax.swing.JPanel();
         jLabel88 = new javax.swing.JLabel();
         jLabel89 = new javax.swing.JLabel();
         jLabel90 = new javax.swing.JLabel();
         jLabel91 = new javax.swing.JLabel();
         LemonTartButton = new javax.swing.JButton();
-        LemonTartField = new javax.swing.JTextField();
+        DessertSpinner5 = new javax.swing.JSpinner();
         jPanel6 = new javax.swing.JPanel();
         jPanel30 = new javax.swing.JPanel();
         jLabel92 = new javax.swing.JLabel();
@@ -171,37 +200,37 @@ public class Menu extends javax.swing.JFrame {
         jLabel94 = new javax.swing.JLabel();
         jLabel95 = new javax.swing.JLabel();
         PiemonteButton = new javax.swing.JButton();
-        PiemonteField = new javax.swing.JTextField();
         jLabel112 = new javax.swing.JLabel();
+        BeverageSpinner1 = new javax.swing.JSpinner();
         jPanel35 = new javax.swing.JPanel();
         jLabel113 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
         jLabel115 = new javax.swing.JLabel();
         jLabel116 = new javax.swing.JLabel();
         AperolButton = new javax.swing.JButton();
-        AperolField = new javax.swing.JTextField();
+        BeverageSpinner2 = new javax.swing.JSpinner();
         jPanel36 = new javax.swing.JPanel();
         jLabel118 = new javax.swing.JLabel();
         jLabel119 = new javax.swing.JLabel();
         jLabel120 = new javax.swing.JLabel();
         jLabel121 = new javax.swing.JLabel();
         IcedTeaButton = new javax.swing.JButton();
-        IcedTeaField = new javax.swing.JTextField();
+        BeverageSpinner3 = new javax.swing.JSpinner();
         jPanel37 = new javax.swing.JPanel();
         jLabel123 = new javax.swing.JLabel();
         jLabel124 = new javax.swing.JLabel();
         jLabel125 = new javax.swing.JLabel();
         jLabel126 = new javax.swing.JLabel();
         OldCubanButton = new javax.swing.JButton();
-        OldCubanField = new javax.swing.JTextField();
+        BeverageSpinner4 = new javax.swing.JSpinner();
         jPanel38 = new javax.swing.JPanel();
         jLabel128 = new javax.swing.JLabel();
         jLabel129 = new javax.swing.JLabel();
         jLabel130 = new javax.swing.JLabel();
         jLabel131 = new javax.swing.JLabel();
         VermenetinoButton = new javax.swing.JButton();
-        VermentinoField = new javax.swing.JTextField();
         jLabel132 = new javax.swing.JLabel();
+        BeverageSpinner5 = new javax.swing.JSpinner();
         jPanel2 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
@@ -229,9 +258,9 @@ public class Menu extends javax.swing.JFrame {
         jLabel100 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         FixePrieButton = new javax.swing.JButton();
-        FixePrieField = new javax.swing.JTextField();
         jLabel133 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        FixePrieSpinner = new javax.swing.JSpinner();
         jPanel7 = new javax.swing.JPanel();
         CashButton = new javax.swing.JButton();
         CreditCardButton = new javax.swing.JButton();
@@ -252,12 +281,13 @@ public class Menu extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         ReceiptTextArea = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
-        TipField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        SubtotalField = new javax.swing.JTextField();
-        TotalField = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
+        ServiceChargeTxt = new javax.swing.JLabel();
+        SubtotalTxt = new javax.swing.JLabel();
+        TotalTxt = new javax.swing.JLabel();
+        ClearSelectionButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -268,7 +298,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel14.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-108x102 (6).jpg"))); // NOI18N
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-108x102 (6).jpg"))); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel11.setText("Escargot a");
@@ -284,13 +314,6 @@ public class Menu extends javax.swing.JFrame {
         EscargotButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 EscargotButtonActionPerformed(evt);
-            }
-        });
-
-        EscargotField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        EscargotField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                EscargotFieldActionPerformed(evt);
             }
         });
 
@@ -317,10 +340,10 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel14Layout.createSequentialGroup()
                                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(EscargotField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(AppetizerSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(EscargotButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addContainerGap(14, Short.MAX_VALUE))))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -336,7 +359,7 @@ public class Menu extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel17)
-                            .addComponent(EscargotField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(AppetizerSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(EscargotButton)
                         .addGap(5, 5, 5))
@@ -347,7 +370,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel15.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel33.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-108x102.jpg"))); // NOI18N
+        jLabel33.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-108x102.jpg"))); // NOI18N
 
         jLabel34.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel34.setText("Bone Marrow");
@@ -363,13 +386,6 @@ public class Menu extends javax.swing.JFrame {
         MarrowButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MarrowButtonActionPerformed(evt);
-            }
-        });
-
-        BoneMarrowField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        BoneMarrowField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BoneMarrowFieldActionPerformed(evt);
             }
         });
 
@@ -390,10 +406,10 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel15Layout.createSequentialGroup()
                                 .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(BoneMarrowField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Appetizer1Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(MarrowButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addContainerGap(14, Short.MAX_VALUE))))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -404,10 +420,10 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel34)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel35)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel36)
-                            .addComponent(BoneMarrowField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Appetizer1Spinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(MarrowButton))
                     .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -417,7 +433,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel16.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel19.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-108x102 (4).jpg"))); // NOI18N
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-108x102 (4).jpg"))); // NOI18N
 
         jLabel20.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel20.setText("Quinoa Salad");
@@ -433,13 +449,6 @@ public class Menu extends javax.swing.JFrame {
         QuinoaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 QuinoaButtonActionPerformed(evt);
-            }
-        });
-
-        QuinoaSaladField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        QuinoaSaladField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                QuinoaSaladFieldActionPerformed(evt);
             }
         });
 
@@ -461,9 +470,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel16Layout.createSequentialGroup()
                                 .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(QuinoaSaladField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(AppetizerSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(QuinoaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addContainerGap(14, Short.MAX_VALUE))))
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -476,8 +485,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel37)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(QuinoaSaladField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel38))
+                            .addComponent(jLabel38)
+                            .addComponent(AppetizerSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(QuinoaButton))
                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -487,7 +496,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel17.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel39.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-108x102 (2).jpg"))); // NOI18N
+        jLabel39.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-108x102 (2).jpg"))); // NOI18N
 
         jLabel40.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel40.setText("Sea Scallops");
@@ -503,13 +512,6 @@ public class Menu extends javax.swing.JFrame {
         ScallopsButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ScallopsButtonActionPerformed(evt);
-            }
-        });
-
-        ScallopField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        ScallopField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ScallopFieldActionPerformed(evt);
             }
         });
 
@@ -531,9 +533,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel17Layout.createSequentialGroup()
                                 .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(ScallopField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(AppetizerSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(ScallopsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(13, Short.MAX_VALUE))))
+                        .addContainerGap(15, Short.MAX_VALUE))))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -546,8 +548,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel41)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ScallopField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel42))
+                            .addComponent(jLabel42)
+                            .addComponent(AppetizerSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ScallopsButton))
                     .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -557,7 +559,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel18.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel43.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-108x102 (5).jpg"))); // NOI18N
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-108x102 (5).jpg"))); // NOI18N
 
         jLabel44.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel44.setText("Tuna Tartare");
@@ -573,13 +575,6 @@ public class Menu extends javax.swing.JFrame {
         TartareButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TartareButtonActionPerformed(evt);
-            }
-        });
-
-        TartareField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        TartareField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TartareFieldActionPerformed(evt);
             }
         });
 
@@ -601,9 +596,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel18Layout.createSequentialGroup()
                                 .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TartareField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(AppetizerSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(TartareButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(12, Short.MAX_VALUE))))
         );
         jPanel18Layout.setVerticalGroup(
             jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -616,8 +611,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel45)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(TartareField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel46))
+                            .addComponent(jLabel46)
+                            .addComponent(AppetizerSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(TartareButton))
                     .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -628,10 +623,13 @@ public class Menu extends javax.swing.JFrame {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 527, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(410, Short.MAX_VALUE)
+                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(89, 89, 89))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
-                    .addGap(0, 13, Short.MAX_VALUE)
+                    .addGap(0, 21, Short.MAX_VALUE)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel3Layout.createSequentialGroup()
                             .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -642,11 +640,14 @@ public class Menu extends javax.swing.JFrame {
                             .addGap(26, 26, 26)
                             .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 12, Short.MAX_VALUE)))
+                    .addGap(0, 20, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap(384, Short.MAX_VALUE)
+                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(54, 54, 54))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -669,7 +670,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel20.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel52.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/steamedmussels.jpg"))); // NOI18N
+        jLabel52.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/steamedmussels.jpg"))); // NOI18N
 
         jLabel53.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel53.setText("Steamed Mussels");
@@ -688,13 +689,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        MusselsField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        MusselsField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                MusselsFieldActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
@@ -704,16 +698,16 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel53, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(MusselsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel20Layout.createSequentialGroup()
                                 .addComponent(jLabel55, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(MusselsField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel54, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(MusselsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 6, Short.MAX_VALUE)))
+                                .addComponent(EntreeSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel20Layout.setVerticalGroup(
@@ -725,10 +719,10 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel53)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel54)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel55)
-                            .addComponent(MusselsField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(EntreeSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(MusselsButton))
                     .addComponent(jLabel52, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -738,7 +732,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel21.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel56.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tomahawk.jpg"))); // NOI18N
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/tomahawk.jpg"))); // NOI18N
 
         jLabel57.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel57.setText("Tomahawk Steak");
@@ -754,13 +748,6 @@ public class Menu extends javax.swing.JFrame {
         TomahawkButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TomahawkButtonActionPerformed(evt);
-            }
-        });
-
-        TomahawkField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        TomahawkField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TomahawkFieldActionPerformed(evt);
             }
         });
 
@@ -782,7 +769,7 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel21Layout.createSequentialGroup()
                                 .addComponent(jLabel59, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TomahawkField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(EntreeSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(TomahawkButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -796,10 +783,10 @@ public class Menu extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel58)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(TomahawkField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel59))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel59)
+                            .addComponent(EntreeSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(TomahawkButton))
                     .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(24, Short.MAX_VALUE))
@@ -808,7 +795,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel22.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel60.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pennevodka.jpg"))); // NOI18N
+        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/pennevodka.jpg"))); // NOI18N
 
         jLabel61.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel61.setText("Penne Vodka");
@@ -824,13 +811,6 @@ public class Menu extends javax.swing.JFrame {
         PenneVodkaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PenneVodkaButtonActionPerformed(evt);
-            }
-        });
-
-        PenneVodkaField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        PenneVodkaField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PenneVodkaFieldActionPerformed(evt);
             }
         });
 
@@ -852,9 +832,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel22Layout.createSequentialGroup()
                                 .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PenneVodkaField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(EntreeSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(PenneVodkaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(13, Short.MAX_VALUE))))
+                        .addContainerGap(15, Short.MAX_VALUE))))
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -867,8 +847,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel62)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(PenneVodkaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel63))
+                            .addComponent(jLabel63)
+                            .addComponent(EntreeSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(PenneVodkaButton))
                     .addComponent(jLabel60, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -878,7 +858,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel23.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel64.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/chickengallianp.jpg"))); // NOI18N
+        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/chickengallianp.jpg"))); // NOI18N
 
         jLabel65.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel65.setText("Chicken Galliano");
@@ -894,13 +874,6 @@ public class Menu extends javax.swing.JFrame {
         GallianoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 GallianoButtonActionPerformed(evt);
-            }
-        });
-
-        GallianoField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        GallianoField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GallianoFieldActionPerformed(evt);
             }
         });
 
@@ -922,7 +895,7 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel23Layout.createSequentialGroup()
                                 .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(GallianoField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(EntreeSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(GallianoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -937,8 +910,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel66)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(GallianoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel67))
+                            .addComponent(jLabel67)
+                            .addComponent(EntreeSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(GallianoButton))
                     .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -948,7 +921,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel24.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel68.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/salmon.jpg"))); // NOI18N
+        jLabel68.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/salmon.jpg"))); // NOI18N
 
         jLabel69.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel69.setText("Grilled Salmon");
@@ -964,13 +937,6 @@ public class Menu extends javax.swing.JFrame {
         SalmonButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SalmonButtonActionPerformed(evt);
-            }
-        });
-
-        SalmonField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        SalmonField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SalmonFieldActionPerformed(evt);
             }
         });
 
@@ -992,9 +958,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel24Layout.createSequentialGroup()
                                 .addComponent(jLabel71, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SalmonField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(EntreeSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(SalmonButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addContainerGap(14, Short.MAX_VALUE))))
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1007,8 +973,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel70)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(SalmonField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel71))
+                            .addComponent(jLabel71)
+                            .addComponent(EntreeSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(SalmonButton))
                     .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1031,7 +997,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1056,7 +1022,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel25.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel72.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cremebrulee.jpg"))); // NOI18N
+        jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/cremebrulee.jpg"))); // NOI18N
 
         jLabel73.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel73.setText("Crème Brûlée");
@@ -1075,13 +1041,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        CremeBruleeField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        CremeBruleeField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CremeBruleeFieldActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
         jPanel25Layout.setHorizontalGroup(
@@ -1094,13 +1053,13 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jLabel73, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel25Layout.createSequentialGroup()
                         .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(CremeBruleeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel25Layout.createSequentialGroup()
                                 .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(CremeBruleeField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel74, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(CremeBruleeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 6, Short.MAX_VALUE)))
+                                .addComponent(DessertSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 8, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel25Layout.setVerticalGroup(
@@ -1112,10 +1071,10 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel73)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel74)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGap(9, 9, 9)
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel75)
-                            .addComponent(CremeBruleeField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(DessertSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(CremeBruleeButton))
                     .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1125,7 +1084,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel26.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel76.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/profiteroles.jpg"))); // NOI18N
+        jLabel76.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/profiteroles.jpg"))); // NOI18N
 
         jLabel77.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel77.setText("Profiteroles");
@@ -1141,13 +1100,6 @@ public class Menu extends javax.swing.JFrame {
         ProfiterolesButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ProfiterolesButtonActionPerformed(evt);
-            }
-        });
-
-        Profiteroles.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        Profiteroles.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ProfiterolesActionPerformed(evt);
             }
         });
 
@@ -1169,9 +1121,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel26Layout.createSequentialGroup()
                                 .addComponent(jLabel79, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Profiteroles, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(DessertSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(ProfiterolesButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(13, Short.MAX_VALUE))))
+                        .addContainerGap(15, Short.MAX_VALUE))))
         );
         jPanel26Layout.setVerticalGroup(
             jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1184,8 +1136,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel78)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Profiteroles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel79))
+                            .addComponent(jLabel79)
+                            .addComponent(DessertSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(ProfiterolesButton))
                     .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1195,7 +1147,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel27.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel80.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tiramisu.jpg"))); // NOI18N
+        jLabel80.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/tiramisu.jpg"))); // NOI18N
 
         jLabel81.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel81.setText("Tiramisu");
@@ -1211,13 +1163,6 @@ public class Menu extends javax.swing.JFrame {
         TiramisuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TiramisuButtonActionPerformed(evt);
-            }
-        });
-
-        TiramisuField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        TiramisuField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TiramisuFieldActionPerformed(evt);
             }
         });
 
@@ -1239,9 +1184,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel27Layout.createSequentialGroup()
                                 .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TiramisuField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(DessertSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(TiramisuButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(13, Short.MAX_VALUE))))
+                        .addContainerGap(15, Short.MAX_VALUE))))
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1254,8 +1199,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel82)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(TiramisuField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel83))
+                            .addComponent(jLabel83)
+                            .addComponent(DessertSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(TiramisuButton))
                     .addComponent(jLabel80, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1265,7 +1210,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel28.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel84.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/pavlova.jpg"))); // NOI18N
+        jLabel84.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/pavlova.jpg"))); // NOI18N
 
         jLabel85.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel85.setText("Mango Pavlova");
@@ -1281,13 +1226,6 @@ public class Menu extends javax.swing.JFrame {
         PavlovaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PavlovaButtonActionPerformed(evt);
-            }
-        });
-
-        PavlovaField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        PavlovaField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PavlovaFieldActionPerformed(evt);
             }
         });
 
@@ -1309,7 +1247,7 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel28Layout.createSequentialGroup()
                                 .addComponent(jLabel87, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PavlovaField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(DessertSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(PavlovaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
@@ -1324,8 +1262,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel86)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(PavlovaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel87))
+                            .addComponent(jLabel87)
+                            .addComponent(DessertSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(PavlovaButton))
                     .addComponent(jLabel84, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1335,7 +1273,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel29.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel88.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/lemontart.jpg"))); // NOI18N
+        jLabel88.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/lemontart.jpg"))); // NOI18N
 
         jLabel89.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel89.setText("Lemon Tart");
@@ -1351,13 +1289,6 @@ public class Menu extends javax.swing.JFrame {
         LemonTartButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LemonTartButtonActionPerformed(evt);
-            }
-        });
-
-        LemonTartField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        LemonTartField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LemonTartFieldActionPerformed(evt);
             }
         });
 
@@ -1379,9 +1310,9 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel29Layout.createSequentialGroup()
                                 .addComponent(jLabel91, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(LemonTartField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(DessertSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(LemonTartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addContainerGap(12, Short.MAX_VALUE))))
+                        .addContainerGap(14, Short.MAX_VALUE))))
         );
         jPanel29Layout.setVerticalGroup(
             jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1394,8 +1325,8 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel90)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(LemonTartField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel91))
+                            .addComponent(jLabel91)
+                            .addComponent(DessertSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(LemonTartButton))
                     .addComponent(jLabel88, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1418,7 +1349,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jPanel27, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1443,7 +1374,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel30.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel92.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/piemento.jpg"))); // NOI18N
+        jLabel92.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/piemento.jpg"))); // NOI18N
 
         jLabel93.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel93.setText("Barolo, Piemonte");
@@ -1459,13 +1390,6 @@ public class Menu extends javax.swing.JFrame {
         PiemonteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PiemonteButtonActionPerformed(evt);
-            }
-        });
-
-        PiemonteField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        PiemonteField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PiemonteFieldActionPerformed(evt);
             }
         });
 
@@ -1485,12 +1409,12 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jLabel112, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel30Layout.createSequentialGroup()
                         .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PiemonteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel30Layout.createSequentialGroup()
                                 .addComponent(jLabel95, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(PiemonteField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(PiemonteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(BeverageSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1507,9 +1431,9 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel94)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel30Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(PiemonteField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel95))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel95)
+                            .addComponent(BeverageSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                         .addComponent(PiemonteButton))
                     .addComponent(jLabel92, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1518,7 +1442,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel35.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel113.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/aperol.jpg"))); // NOI18N
+        jLabel113.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/aperol.jpg"))); // NOI18N
 
         jLabel114.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel114.setText("Aperol Spritz");
@@ -1534,13 +1458,6 @@ public class Menu extends javax.swing.JFrame {
         AperolButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AperolButtonActionPerformed(evt);
-            }
-        });
-
-        AperolField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        AperolField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                AperolFieldActionPerformed(evt);
             }
         });
 
@@ -1560,8 +1477,8 @@ public class Menu extends javax.swing.JFrame {
                             .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel35Layout.createSequentialGroup()
                                 .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(AperolField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BeverageSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1575,19 +1492,19 @@ public class Menu extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel115)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(AperolField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel116))
+                        .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel116)
+                            .addComponent(BeverageSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(AperolButton))
                     .addComponent(jLabel113, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel36.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel118.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/icedtea.jpg"))); // NOI18N
+        jLabel118.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/icedtea.jpg"))); // NOI18N
 
         jLabel119.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel119.setText("Iced Tea");
@@ -1603,13 +1520,6 @@ public class Menu extends javax.swing.JFrame {
         IcedTeaButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 IcedTeaButtonActionPerformed(evt);
-            }
-        });
-
-        IcedTeaField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        IcedTeaField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IcedTeaFieldActionPerformed(evt);
             }
         });
 
@@ -1630,7 +1540,7 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel36Layout.createSequentialGroup()
                                 .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(IcedTeaField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(BeverageSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1650,7 +1560,7 @@ public class Menu extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel121)
-                            .addComponent(IcedTeaField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BeverageSpinner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(IcedTeaButton)
                         .addGap(12, 12, 12))))
@@ -1659,7 +1569,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel37.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel123.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel123.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/oldcuban.jpg"))); // NOI18N
+        jLabel123.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/oldcuban.jpg"))); // NOI18N
 
         jLabel124.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel124.setText("Old Cuban");
@@ -1678,13 +1588,6 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        OldCubanField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        OldCubanField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                OldCubanFieldActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
         jPanel37.setLayout(jPanel37Layout);
         jPanel37Layout.setHorizontalGroup(
@@ -1697,12 +1600,12 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jLabel124, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
                     .addGroup(jPanel37Layout.createSequentialGroup()
                         .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(OldCubanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel125, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel37Layout.createSequentialGroup()
                                 .addComponent(jLabel126, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(OldCubanField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(OldCubanButton, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel125, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(BeverageSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -1721,7 +1624,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(9, 9, 9)
                         .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel126)
-                            .addComponent(OldCubanField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BeverageSpinner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(OldCubanButton)
                         .addGap(7, 7, 7))))
@@ -1730,7 +1633,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel38.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel128.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel128.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/vermentino.jpg"))); // NOI18N
+        jLabel128.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/vermentino.jpg"))); // NOI18N
 
         jLabel129.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel129.setText("Vermentino");
@@ -1746,13 +1649,6 @@ public class Menu extends javax.swing.JFrame {
         VermenetinoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 VermenetinoButtonActionPerformed(evt);
-            }
-        });
-
-        VermentinoField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        VermentinoField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VermentinoFieldActionPerformed(evt);
             }
         });
 
@@ -1777,8 +1673,8 @@ public class Menu extends javax.swing.JFrame {
                             .addGroup(jPanel38Layout.createSequentialGroup()
                                 .addComponent(jLabel131, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(VermentinoField, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 7, Short.MAX_VALUE)))
+                                .addComponent(BeverageSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 9, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel38Layout.setVerticalGroup(
@@ -1792,14 +1688,14 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jLabel132)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel130)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel131)
-                            .addComponent(VermentinoField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(BeverageSpinner5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(VermenetinoButton))
                     .addComponent(jLabel128, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(9, Short.MAX_VALUE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
@@ -1807,7 +1703,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -1824,11 +1720,11 @@ public class Menu extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(31, Short.MAX_VALUE)
+                .addContainerGap(39, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -1846,7 +1742,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel9.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-108x102 (9).jpg"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-108x102 (9).jpg"))); // NOI18N
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel6.setText("Wagyu Beef Steak");
@@ -1903,7 +1799,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel12.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel26.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-108x102 (1).jpg"))); // NOI18N
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-108x102 (1).jpg"))); // NOI18N
 
         jLabel27.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel27.setText("Foie Gras");
@@ -1959,7 +1855,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel13.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel21.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-108x102 (8).jpg"))); // NOI18N
+        jLabel21.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-108x102 (8).jpg"))); // NOI18N
 
         jLabel22.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel22.setText("French Onion Soup");
@@ -2016,7 +1912,7 @@ public class Menu extends javax.swing.JFrame {
         jPanel11.setBackground(new java.awt.Color(190, 165, 146));
 
         jLabel25.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-108x102 (7).jpg"))); // NOI18N
+        jLabel25.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-108x102 (7).jpg"))); // NOI18N
 
         jLabel30.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel30.setText("Chocolate Soufflé");
@@ -2082,14 +1978,6 @@ public class Menu extends javax.swing.JFrame {
         });
         jPanel2.add(FixePrieButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 58, -1));
 
-        FixePrieField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        FixePrieField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FixePrieFieldActionPerformed(evt);
-            }
-        });
-        jPanel2.add(FixePrieField, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 360, 46, -1));
-
         jLabel133.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel133.setText("Quantity:");
         jPanel2.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 80, -1));
@@ -2097,6 +1985,9 @@ public class Menu extends javax.swing.JFrame {
         jLabel15.setFont(new java.awt.Font("Century Gothic", 0, 14)); // NOI18N
         jLabel15.setText("Php 7,000");
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
+
+        FixePrieSpinner.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jPanel2.add(FixePrieSpinner, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, -1, -1));
 
         Desserts.addTab("Fixe Prie", jPanel2);
 
@@ -2200,7 +2091,7 @@ public class Menu extends javax.swing.JFrame {
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addComponent(CashButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(CreditCardButton, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                        .addComponent(CreditCardButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ChequeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel7Layout.createSequentialGroup()
@@ -2257,12 +2148,12 @@ public class Menu extends javax.swing.JFrame {
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+            .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
                     .addComponent(jButton1))
-                .addContainerGap())
+                .addGap(0, 4, Short.MAX_VALUE))
         );
 
         ConfirmSelectionButton.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
@@ -2278,37 +2169,33 @@ public class Menu extends javax.swing.JFrame {
         ReceiptTextArea.setRows(5);
         jScrollPane2.setViewportView(ReceiptTextArea);
 
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel3.setText("SUBTOTAL");
 
-        TipField.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
-        TipField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TipFieldActionPerformed(evt);
-            }
-        });
+        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        jLabel4.setText("Service Charge");
 
-        jLabel4.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
-        jLabel4.setText("TIP");
-
-        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         jLabel7.setText("TOTAL");
 
-        SubtotalField.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
-        SubtotalField.addActionListener(new java.awt.event.ActionListener() {
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/footerbg_1.jpg"))); // NOI18N
+
+        ServiceChargeTxt.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        ServiceChargeTxt.setText("0.0");
+
+        SubtotalTxt.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        SubtotalTxt.setText("0.0");
+
+        TotalTxt.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        TotalTxt.setText("0.0");
+
+        ClearSelectionButton.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+        ClearSelectionButton.setText("CLEAR");
+        ClearSelectionButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SubtotalFieldActionPerformed(evt);
+                ClearSelectionButtonActionPerformed(evt);
             }
         });
-
-        TotalField.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
-        TotalField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TotalFieldActionPerformed(evt);
-            }
-        });
-
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/footerbg_1.jpg"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -2322,21 +2209,22 @@ public class Menu extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(ConfirmSelectionButton)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel3)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(ConfirmSelectionButton, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(ClearSelectionButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(SubtotalField, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(SubtotalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel4)
-                                .addGap(8, 8, 8)
-                                .addComponent(TipField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ServiceChargeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel7)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(TotalField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(TotalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 521, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2351,19 +2239,26 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(Desserts, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addComponent(TotalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addComponent(ServiceChargeTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                                    .addComponent(SubtotalTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ConfirmSelectionButton)
+                                .addGap(0, 10, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(SubtotalField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TipField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(TotalField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ConfirmSelectionButton))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(ClearSelectionButton)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 341, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -2385,12 +2280,8 @@ public class Menu extends javax.swing.JFrame {
 
     private void EscargotButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscargotButtonActionPerformed
         try {
-            String input = EscargotField.getText().trim(); // Trim to remove leading/trailing spaces
-            if (input.isEmpty()) {
-                throw new NumberFormatException("Input is empty");
-            }
-
-            int quantity = Integer.parseInt(input);
+            String quantitytxt = AppetizerSpinner5.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
             String itemName = "Escargot a la Bourguignonne";
             int menuId = 5;
             double price = 780.0;
@@ -2412,18 +2303,10 @@ public class Menu extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_EscargotButtonActionPerformed
 
-    private void EscargotFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EscargotFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_EscargotFieldActionPerformed
-
     private void MarrowButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarrowButtonActionPerformed
         try {
-            String input = BoneMarrowField.getText().trim(); // Trim to remove leading/trailing spaces
-            if (input.isEmpty()) {
-                throw new NumberFormatException("Input is empty");
-            }
-
-            int quantity = Integer.parseInt(input);
+            String quantitytxt = Appetizer1Spinner.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
             String itemName = "Bone Marrow";
             int menuId = 1;
             double price = 850.0;
@@ -2445,18 +2328,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_MarrowButtonActionPerformed
 
-    private void BoneMarrowFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BoneMarrowFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BoneMarrowFieldActionPerformed
-
     private void QuinoaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuinoaButtonActionPerformed
         try {
-            String input = QuinoaSaladField.getText().trim(); // Trim to remove leading/trailing spaces
-            if (input.isEmpty()) {
-                throw new NumberFormatException("Input is empty");
-            }
-
-            int quantity = Integer.parseInt(input);
+            String quantitytxt = AppetizerSpinner3.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
             String itemName = "Quinoa Salad";
             int menuId = 3;
             double price = 680.0;
@@ -2479,18 +2354,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_QuinoaButtonActionPerformed
 
-    private void QuinoaSaladFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuinoaSaladFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_QuinoaSaladFieldActionPerformed
-
     private void ScallopsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScallopsButtonActionPerformed
         try {
-        String input = ScallopField.getText().trim(); // Trim to remove leading/trailing spaces
-        if (input.isEmpty()) {
-            throw new NumberFormatException("Input is empty");
-        }
-        
-        int quantity = Integer.parseInt(input);
+        String quantitytxt = AppetizerSpinner2.getValue().toString();
+        int quantity = Integer.parseInt(quantitytxt);
         String itemName = "Sea Scallops";
         int menuId = 2;
         double price = 980.0;
@@ -2512,18 +2379,10 @@ public class Menu extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_ScallopsButtonActionPerformed
 
-    private void ScallopFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ScallopFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ScallopFieldActionPerformed
-
     private void TartareButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TartareButtonActionPerformed
             try {
-            String input = TartareField.getText().trim(); // Trim to remove leading/trailing spaces
-            if (input.isEmpty()) {
-                throw new NumberFormatException("Input is empty");
-            }
-
-            int quantity = Integer.parseInt(input);
+            String quantitytxt = AppetizerSpinner4.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
             String itemName = "Tuna Tartare";
             int menuId = 4;
             double price = 920.0;
@@ -2545,18 +2404,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_TartareButtonActionPerformed
 
-    private void TartareFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TartareFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TartareFieldActionPerformed
-
     private void MusselsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MusselsButtonActionPerformed
         try{
-            String input = MusselsField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = EntreeSpinner1.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Steamed Mussels";
              int menuId = 6;
              double price = 1200.0;
@@ -2578,18 +2429,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_MusselsButtonActionPerformed
 
-    private void MusselsFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MusselsFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MusselsFieldActionPerformed
-
     private void TomahawkButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TomahawkButtonActionPerformed
         try{
-            String input = TomahawkField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = EntreeSpinner3.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Tomahawk Steak";
              int menuId = 8;
              double price = 4200.0;
@@ -2611,18 +2454,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_TomahawkButtonActionPerformed
 
-    private void TomahawkFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TomahawkFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TomahawkFieldActionPerformed
-
     private void PenneVodkaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PenneVodkaButtonActionPerformed
         try{
-            String input = PenneVodkaField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = EntreeSpinner2.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Penne Vodka";
              int menuId = 7;
              double price = 850.0;
@@ -2644,18 +2479,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PenneVodkaButtonActionPerformed
 
-    private void PenneVodkaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PenneVodkaFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PenneVodkaFieldActionPerformed
-
     private void GallianoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GallianoButtonActionPerformed
         try{
-            String input = GallianoField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+        String quantitytxt = EntreeSpinner4.getValue().toString();
+        int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Chicken Galliano";
              int menuId = 9;
              double price = 1100.0;
@@ -2677,18 +2504,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_GallianoButtonActionPerformed
 
-    private void GallianoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GallianoFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_GallianoFieldActionPerformed
-
     private void SalmonButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalmonButtonActionPerformed
         try{
-            String input = SalmonField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+             String quantitytxt = EntreeSpinner5.getValue().toString();
+             int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Grilled Salmon";
              int menuId = 10;
              double price = 1400.0;
@@ -2710,18 +2529,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_SalmonButtonActionPerformed
 
-    private void SalmonFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalmonFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_SalmonFieldActionPerformed
-
     private void CremeBruleeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CremeBruleeButtonActionPerformed
         try{
-            String input = CremeBruleeField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = DessertSpinner1.getValue().toString();
+             int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Creme Brulee";
              int menuId = 16;
              double price = 650.0;
@@ -2743,18 +2554,11 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_CremeBruleeButtonActionPerformed
 
-    private void CremeBruleeFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CremeBruleeFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CremeBruleeFieldActionPerformed
-
     private void ProfiterolesButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProfiterolesButtonActionPerformed
         try{
-            String input = Profiteroles.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            
+            String quantitytxt = DessertSpinner2.getValue().toString();
+             int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Profiteroles";
              int menuId = 17;
              double price = 590.0;
@@ -2776,18 +2580,11 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ProfiterolesButtonActionPerformed
 
-    private void ProfiterolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ProfiterolesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ProfiterolesActionPerformed
-
     private void TiramisuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiramisuButtonActionPerformed
         try{
-            String input = TiramisuField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            
+            String quantitytxt = DessertSpinner4.getValue().toString();
+             int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Tiramisu";
              int menuId = 19;
              double price = 600.0;
@@ -2809,18 +2606,11 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_TiramisuButtonActionPerformed
 
-    private void TiramisuFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TiramisuFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TiramisuFieldActionPerformed
-
     private void PavlovaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PavlovaButtonActionPerformed
         try{
-            String input = PavlovaField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            
+            String quantitytxt = DessertSpinner3.getValue().toString();
+             int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Mango Pavlova";
              int menuId = 18;
              double price = 600.0;
@@ -2842,18 +2632,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PavlovaButtonActionPerformed
 
-    private void PavlovaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PavlovaFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PavlovaFieldActionPerformed
-
     private void LemonTartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LemonTartButtonActionPerformed
         try{
-            String input = LemonTartField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = DessertSpinner5.getValue().toString();
+             int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Lemon Tart";
              int menuId = 20;
              double price = 550.0;
@@ -2875,18 +2657,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_LemonTartButtonActionPerformed
 
-    private void LemonTartFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LemonTartFieldActionPerformed
-        
-    }//GEN-LAST:event_LemonTartFieldActionPerformed
-
     private void PiemonteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PiemonteButtonActionPerformed
         try{
-            String input = PiemonteField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = BeverageSpinner3.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Barolo Piemonte";
              int menuId = 21;
              double price = 3500.0;
@@ -2908,18 +2682,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_PiemonteButtonActionPerformed
 
-    private void PiemonteFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PiemonteFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PiemonteFieldActionPerformed
-
     private void AperolButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AperolButtonActionPerformed
         try{
-            String input = AperolField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = BeverageSpinner2.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Aperol Spritz";
              int menuId = 22;
              double price = 850.0;
@@ -2941,18 +2707,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_AperolButtonActionPerformed
 
-    private void AperolFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AperolFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_AperolFieldActionPerformed
-
     private void IcedTeaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedTeaButtonActionPerformed
         try{
-            String input = IcedTeaField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = BeverageSpinner3.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Iced Tea";
              int menuId = 23;
              double price = 400.0;
@@ -2974,18 +2732,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_IcedTeaButtonActionPerformed
 
-    private void IcedTeaFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IcedTeaFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_IcedTeaFieldActionPerformed
-
     private void OldCubanButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OldCubanButtonActionPerformed
         try{
-            String input = OldCubanField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = BeverageSpinner4.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Old Cuban";
              int menuId = 24;
              double price = 900.0;
@@ -3007,18 +2757,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_OldCubanButtonActionPerformed
 
-    private void OldCubanFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_OldCubanFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_OldCubanFieldActionPerformed
-
     private void VermenetinoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VermenetinoButtonActionPerformed
         try{
-            String input = VermentinoField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = BeverageSpinner5.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Vermentino";
              int menuId = 25;
              double price = 1800.0;
@@ -3040,18 +2782,10 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_VermenetinoButtonActionPerformed
 
-    private void VermentinoFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VermentinoFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_VermentinoFieldActionPerformed
-
     private void FixePrieButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FixePrieButtonActionPerformed
         try{
-            String input = FixePrieField.getText().trim();
-             if (input.isEmpty()) {
-                 throw new NumberFormatException("Input is empty");
-             }
-
-             int quantity = Integer.parseInt(input);
+            String quantitytxt = FixePrieSpinner.getValue().toString();
+            int quantity = Integer.parseInt(quantitytxt);
              String itemName = "Fixe Prie";
              int menuId = 1;
              double price = 6500.0;
@@ -3072,10 +2806,6 @@ public class Menu extends javax.swing.JFrame {
              JOptionPane.showMessageDialog(this, "Please enter a valid quantity.", "Input Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_FixePrieButtonActionPerformed
-
-    private void FixePrieFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FixePrieFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FixePrieFieldActionPerformed
 
     private void ConfirmSelectionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmSelectionButtonActionPerformed
         try {
@@ -3260,18 +2990,6 @@ public class Menu extends javax.swing.JFrame {
         return subtotal + tip;
     }
     
-    private void SubtotalFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubtotalFieldActionPerformed
-        
-    }//GEN-LAST:event_SubtotalFieldActionPerformed
-
-    private void TipFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TipFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TipFieldActionPerformed
-
-    private void TotalFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_TotalFieldActionPerformed
-
     private void CashButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CashButtonActionPerformed
         paymentMethod = "Cash";
         chequeNumberField.setEnabled(false); 
@@ -3290,9 +3008,9 @@ public class Menu extends javax.swing.JFrame {
         this.total = calculateTotal(this.subtotal, this.tip);
 
         // Set the values in the respective fields
-        SubtotalField.setText(String.format("%.2f", this.subtotal));
-        TipField.setText(String.format("%.2f", this.tip));
-        TotalField.setText(String.format("%.2f", this.total));
+        SubtotalTxt.setText(String.format("%.2f", this.subtotal));
+        ServiceChargeTxt.setText(String.format("%.2f", this.tip));
+        TotalTxt.setText(String.format("%.2f", this.total));
     }
     
     private void chequeNumberFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chequeNumberFieldActionPerformed
@@ -3314,6 +3032,16 @@ public class Menu extends javax.swing.JFrame {
         main.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ClearSelectionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ClearSelectionButtonActionPerformed
+        AmountField.setText(""); 
+        chequeNumberField.setText(""); 
+        CardNumberField.setText(""); 
+        SubtotalTxt.setText("0.00");
+        ServiceChargeTxt.setText("0.00");
+        TotalTxt.setText("0.00");
+        ReceiptTextArea.setText("");
+    }//GEN-LAST:event_ClearSelectionButtonActionPerformed
 
     private void initializeReceipt() {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
@@ -3375,57 +3103,58 @@ public class Menu extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField AmountField;
     private javax.swing.JButton AperolButton;
-    private javax.swing.JTextField AperolField;
-    private javax.swing.JTextField BoneMarrowField;
+    private javax.swing.JSpinner Appetizer1Spinner;
+    private javax.swing.JSpinner AppetizerSpinner2;
+    private javax.swing.JSpinner AppetizerSpinner3;
+    private javax.swing.JSpinner AppetizerSpinner4;
+    private javax.swing.JSpinner AppetizerSpinner5;
+    private javax.swing.JSpinner BeverageSpinner1;
+    private javax.swing.JSpinner BeverageSpinner2;
+    private javax.swing.JSpinner BeverageSpinner3;
+    private javax.swing.JSpinner BeverageSpinner4;
+    private javax.swing.JSpinner BeverageSpinner5;
     private javax.swing.JTextField CardNumberField;
     private javax.swing.JButton CashButton;
     private javax.swing.JButton ChequeButton;
+    private javax.swing.JButton ClearSelectionButton;
     private javax.swing.JButton ConfirmSelectionButton;
     private javax.swing.JButton CreditCardButton;
     private javax.swing.JButton CremeBruleeButton;
-    private javax.swing.JTextField CremeBruleeField;
+    private javax.swing.JSpinner DessertSpinner1;
+    private javax.swing.JSpinner DessertSpinner2;
+    private javax.swing.JSpinner DessertSpinner3;
+    private javax.swing.JSpinner DessertSpinner4;
+    private javax.swing.JSpinner DessertSpinner5;
     private javax.swing.JTabbedPane Desserts;
+    private javax.swing.JSpinner EntreeSpinner1;
+    private javax.swing.JSpinner EntreeSpinner2;
+    private javax.swing.JSpinner EntreeSpinner3;
+    private javax.swing.JSpinner EntreeSpinner4;
+    private javax.swing.JSpinner EntreeSpinner5;
     private javax.swing.JButton EscargotButton;
-    private javax.swing.JTextField EscargotField;
     private javax.swing.JButton FixePrieButton;
-    private javax.swing.JTextField FixePrieField;
+    private javax.swing.JSpinner FixePrieSpinner;
     private javax.swing.JButton GallianoButton;
-    private javax.swing.JTextField GallianoField;
     private javax.swing.JButton IcedTeaButton;
-    private javax.swing.JTextField IcedTeaField;
     private javax.swing.JButton LemonTartButton;
-    private javax.swing.JTextField LemonTartField;
     private javax.swing.JButton MarrowButton;
     private javax.swing.JButton MusselsButton;
-    private javax.swing.JTextField MusselsField;
     private javax.swing.JButton OldCubanButton;
-    private javax.swing.JTextField OldCubanField;
     private javax.swing.JButton PavlovaButton;
-    private javax.swing.JTextField PavlovaField;
     private javax.swing.JButton PenneVodkaButton;
-    private javax.swing.JTextField PenneVodkaField;
     private javax.swing.JButton PiemonteButton;
-    private javax.swing.JTextField PiemonteField;
-    private javax.swing.JTextField Profiteroles;
     private javax.swing.JButton ProfiterolesButton;
     private javax.swing.JButton QuinoaButton;
-    private javax.swing.JTextField QuinoaSaladField;
     private javax.swing.JTextArea ReceiptTextArea;
     private javax.swing.JButton SalmonButton;
-    private javax.swing.JTextField SalmonField;
-    private javax.swing.JTextField ScallopField;
     private javax.swing.JButton ScallopsButton;
-    private javax.swing.JTextField SubtotalField;
+    private javax.swing.JLabel ServiceChargeTxt;
+    private javax.swing.JLabel SubtotalTxt;
     private javax.swing.JButton TartareButton;
-    private javax.swing.JTextField TartareField;
-    private javax.swing.JTextField TipField;
     private javax.swing.JButton TiramisuButton;
-    private javax.swing.JTextField TiramisuField;
     private javax.swing.JButton TomahawkButton;
-    private javax.swing.JTextField TomahawkField;
-    private javax.swing.JTextField TotalField;
+    private javax.swing.JLabel TotalTxt;
     private javax.swing.JButton VermenetinoButton;
-    private javax.swing.JTextField VermentinoField;
     private javax.swing.JTextField chequeNumberField;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -3578,5 +3307,6 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSpinner jSpinner1;
     // End of variables declaration//GEN-END:variables
 }

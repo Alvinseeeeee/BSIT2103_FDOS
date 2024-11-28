@@ -19,6 +19,7 @@ import BSIT2103_FDOS.BackEnd2.WalkIn;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Date;
 
 public class MainPageForm extends javax.swing.JFrame {
 
@@ -44,6 +45,7 @@ public class MainPageForm extends javax.swing.JFrame {
         TimeChoices(ReservationStartTime);  // Populate the start time ComboBox
         TimeChoices(ReservationEndTime);
         TimeChoices(WalkInEndTime);
+        setDate();
     }
 
     @SuppressWarnings("unchecked")
@@ -59,28 +61,6 @@ public class MainPageForm extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel4 = new javax.swing.JPanel();
-        jPanel7 = new javax.swing.JPanel();
-        FullNameLabel = new javax.swing.JLabel();
-        customerFullNameField = new javax.swing.JTextField();
-        customerEmailField = new javax.swing.JTextField();
-        customerContactNoField = new javax.swing.JTextField();
-        EmailAddressLabel = new javax.swing.JLabel();
-        ContactNumberLabel = new javax.swing.JLabel();
-        CustomerInformation = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        WalkInPartySize = new javax.swing.JSpinner();
-        WalkInEndTime = new javax.swing.JComboBox<>();
-        WalkInDate = new javax.swing.JTextField();
-        WalkInStartTime = new javax.swing.JTextField();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel24 = new javax.swing.JLabel();
-        jLabel25 = new javax.swing.JLabel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel27 = new javax.swing.JLabel();
-        customerEnter = new javax.swing.JButton();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         ReservationHandlingPanel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -111,6 +91,25 @@ public class MainPageForm extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         AlreadyReservedButton = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        FullNameLabel = new javax.swing.JLabel();
+        customerFullNameField = new javax.swing.JTextField();
+        customerEmailField = new javax.swing.JTextField();
+        customerContactNoField = new javax.swing.JTextField();
+        EmailAddressLabel = new javax.swing.JLabel();
+        ContactNumberLabel = new javax.swing.JLabel();
+        CustomerInformation = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        WalkInPartySize = new javax.swing.JSpinner();
+        WalkInEndTime = new javax.swing.JComboBox<>();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        lblCurrentDate = new javax.swing.JLabel();
+        customerEnter = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -131,7 +130,7 @@ public class MainPageForm extends javax.swing.JFrame {
         });
 
         jLabel20.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/image-139x309.jpg"))); // NOI18N
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BSIT2103_FDOS/images/image-139x309.jpg"))); // NOI18N
 
         jLabel21.setFont(new java.awt.Font("Lucida Fax", 0, 10)); // NOI18N
         jLabel21.setText("\"Elevating taste,");
@@ -185,217 +184,6 @@ public class MainPageForm extends javax.swing.JFrame {
                     .addComponent(jButton2))
                 .addGap(15, 15, 15))
         );
-
-        jPanel4.setBackground(new java.awt.Color(161, 138, 121));
-
-        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel7.setPreferredSize(new java.awt.Dimension(301, 210));
-
-        FullNameLabel.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
-        FullNameLabel.setForeground(new java.awt.Color(100, 75, 57));
-        FullNameLabel.setText("Full Name:");
-
-        customerFullNameField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        customerFullNameField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerFullNameFieldActionPerformed(evt);
-            }
-        });
-
-        customerEmailField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        customerEmailField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerEmailFieldActionPerformed(evt);
-            }
-        });
-
-        customerContactNoField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        customerContactNoField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerContactNoFieldActionPerformed(evt);
-            }
-        });
-
-        EmailAddressLabel.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
-        EmailAddressLabel.setForeground(new java.awt.Color(100, 75, 57));
-        EmailAddressLabel.setText("Email Address:");
-
-        ContactNumberLabel.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
-        ContactNumberLabel.setForeground(new java.awt.Color(100, 75, 57));
-        ContactNumberLabel.setText("Contact Number:");
-
-        CustomerInformation.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        CustomerInformation.setForeground(new java.awt.Color(100, 75, 57));
-        CustomerInformation.setText("CUSTOMER INFORMATION");
-
-        jLabel17.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
-        jLabel17.setText("Party Size");
-
-        WalkInEndTime.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        WalkInEndTime.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WalkInEndTimeActionPerformed(evt);
-            }
-        });
-
-        WalkInDate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WalkInDateActionPerformed(evt);
-            }
-        });
-
-        WalkInStartTime.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                WalkInStartTimeActionPerformed(evt);
-            }
-        });
-
-        jLabel23.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
-        jLabel23.setText("Walk-In Date");
-
-        jLabel24.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
-        jLabel24.setText("Start Time");
-
-        jLabel25.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
-        jLabel25.setText("End Time");
-
-        jLabel26.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
-        jLabel26.setText("No need to fill up");
-
-        jLabel27.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
-        jLabel27.setText("No need to fill up");
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                .addContainerGap(12, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(WalkInPartySize, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel7Layout.createSequentialGroup()
-                                    .addGap(55, 55, 55)
-                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(CustomerInformation)
-                                        .addComponent(EmailAddressLabel)
-                                        .addComponent(ContactNumberLabel)
-                                        .addComponent(customerContactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(customerFullNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(customerEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(FullNameLabel))))
-                            .addGap(64, 64, 64))
-                        .addGroup(jPanel7Layout.createSequentialGroup()
-                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(WalkInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGap(18, 18, 18)
-                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(jPanel7Layout.createSequentialGroup()
-                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel7Layout.createSequentialGroup()
-                                            .addComponent(WalkInStartTime)
-                                            .addGap(18, 18, 18))
-                                        .addGroup(jPanel7Layout.createSequentialGroup()
-                                            .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(40, 40, 40)))
-                                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(WalkInEndTime, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addContainerGap()))))
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(CustomerInformation)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(FullNameLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(customerFullNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(EmailAddressLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(customerEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(ContactNumberLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(customerContactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(WalkInPartySize, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(jLabel24)
-                    .addComponent(jLabel25))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(WalkInEndTime, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(WalkInDate, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(WalkInStartTime, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(jLabel27))
-                .addContainerGap())
-        );
-
-        customerEnter.setBackground(new java.awt.Color(228, 224, 225));
-        customerEnter.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        customerEnter.setForeground(new java.awt.Color(100, 75, 57));
-        customerEnter.setText("NEXT");
-        customerEnter.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                customerEnterActionPerformed(evt);
-            }
-        });
-
-        jLabel14.setFont(new java.awt.Font("Lucida Fax", 0, 24)); // NOI18N
-        jLabel14.setText("BAGGY'S DINER");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(customerEnter)
-                .addGap(38, 38, 38))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(93, 93, 93)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(99, Short.MAX_VALUE))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel18)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 321, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(customerEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jTabbedPane1.addTab("WALK IN", jPanel4);
 
         jPanel5.setBackground(new java.awt.Color(161, 138, 121));
 
@@ -613,7 +401,7 @@ public class MainPageForm extends javax.swing.JFrame {
                                 .addComponent(ContactNoField)
                                 .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(26, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -674,7 +462,7 @@ public class MainPageForm extends javax.swing.JFrame {
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(AlreadyReservedButton)
                             .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 13, Short.MAX_VALUE)))
+                        .addGap(0, 22, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ReservationHandlingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -682,7 +470,7 @@ public class MainPageForm extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
+                .addContainerGap(47, Short.MAX_VALUE)
                 .addComponent(ReservationHandlingPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
@@ -701,14 +489,208 @@ public class MainPageForm extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("RESERVATION", jPanel5);
 
+        jPanel4.setBackground(new java.awt.Color(161, 138, 121));
+
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setPreferredSize(new java.awt.Dimension(301, 210));
+
+        FullNameLabel.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        FullNameLabel.setForeground(new java.awt.Color(100, 75, 57));
+        FullNameLabel.setText("Full Name:");
+
+        customerFullNameField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        customerFullNameField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerFullNameFieldActionPerformed(evt);
+            }
+        });
+
+        customerEmailField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        customerEmailField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerEmailFieldActionPerformed(evt);
+            }
+        });
+
+        customerContactNoField.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        customerContactNoField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerContactNoFieldActionPerformed(evt);
+            }
+        });
+
+        EmailAddressLabel.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        EmailAddressLabel.setForeground(new java.awt.Color(100, 75, 57));
+        EmailAddressLabel.setText("Email Address:");
+
+        ContactNumberLabel.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        ContactNumberLabel.setForeground(new java.awt.Color(100, 75, 57));
+        ContactNumberLabel.setText("Contact Number:");
+
+        CustomerInformation.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        CustomerInformation.setForeground(new java.awt.Color(100, 75, 57));
+        CustomerInformation.setText("CUSTOMER INFORMATION");
+
+        jLabel17.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        jLabel17.setText("Party Size");
+
+        WalkInEndTime.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        WalkInEndTime.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                WalkInEndTimeActionPerformed(evt);
+            }
+        });
+
+        jLabel23.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        jLabel23.setText("Walk-In Date");
+
+        jLabel25.setFont(new java.awt.Font("Century Gothic", 0, 8)); // NOI18N
+        jLabel25.setText("End Time");
+
+        lblCurrentDate.setBackground(new java.awt.Color(250, 250, 250));
+        lblCurrentDate.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(lblCurrentDate, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(lblCurrentDate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                            .addComponent(WalkInPartySize, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(jPanel7Layout.createSequentialGroup()
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 130, Short.MAX_VALUE)
+                            .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(WalkInEndTime, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel25, javax.swing.GroupLayout.Alignment.TRAILING))
+                            .addGap(58, 58, 58)))))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(64, 64, 64)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(CustomerInformation)
+                    .addComponent(EmailAddressLabel)
+                    .addComponent(customerContactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customerFullNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(customerEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(FullNameLabel)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(ContactNumberLabel)
+                        .addGap(156, 156, 156)))
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(CustomerInformation)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(FullNameLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(customerFullNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(EmailAddressLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(customerEmailField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ContactNumberLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(customerContactNoField, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(8, 8, 8)
+                .addComponent(jLabel17)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(WalkInPartySize, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel25))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(WalkInEndTime, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(26, 26, 26))
+        );
+
+        customerEnter.setBackground(new java.awt.Color(228, 224, 225));
+        customerEnter.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        customerEnter.setForeground(new java.awt.Color(100, 75, 57));
+        customerEnter.setText("NEXT");
+        customerEnter.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                customerEnterActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setFont(new java.awt.Font("Lucida Fax", 0, 24)); // NOI18N
+        jLabel14.setText("BAGGY'S DINER");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addGap(47, 47, 47)
+                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(customerEnter)
+                .addGap(38, 38, 38))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(93, 93, 93)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(166, 166, 166)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(108, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel18)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(customerEnter, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jTabbedPane1.addTab("WALK IN", jPanel4);
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jTabbedPane1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -722,7 +704,9 @@ public class MainPageForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -871,23 +855,6 @@ public class MainPageForm extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_customerContactNoFieldActionPerformed
 
-    
-    // Constructor or form initialization
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {    
-        LocalDate currentDate = LocalDate.now();
-        DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");  // Format as "yyyy-MM-dd"
-        String formattedDate = currentDate.format(dateFormatter);
-
-        WalkInDate.setText(formattedDate);
-
-        LocalTime currentTime = LocalTime.now();
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-        String formattedTime = currentTime.format(timeFormatter);
-
-        WalkInStartTime.setText(formattedTime);
-    }
-
-    
     private void customerEnterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerEnterActionPerformed
         String WalkInfullName = customerFullNameField.getText();
         String WalkInemail = customerEmailField.getText();
@@ -896,10 +863,12 @@ public class MainPageForm extends javax.swing.JFrame {
         String endTime = ReservationEndTime.getSelectedItem().toString();
         String partySize = WalkInPartySize.getValue().toString();
 
-        String selectedDate = WalkInDate.getText();  
-        String timeVariable = WalkInStartTime.getText();
-
+        LocalDate currentDate1 = LocalDate.now();
         LocalTime currentTime = LocalTime.now();
+        String currentDate = LocalDate.now().toString();
+        // Update labels with the generated values
+        lblCurrentDate.setText(currentDate1.toString());
+
         LocalTime openTime = LocalTime.of(0, 0);
         LocalTime closeTime = LocalTime.of(23, 59); 
 
@@ -908,13 +877,23 @@ public class MainPageForm extends javax.swing.JFrame {
             return; 
         }
 
-        walkin.walkInCustomer(WalkInfullName, WalkInemail, WalkIncontactNo, startTime, endTime, selectedDate, partySize);
+        walkin.walkInCustomer(WalkInfullName, WalkInemail, WalkIncontactNo, startTime, endTime, currentDate, partySize);
         Menu menu = new Menu();
         menu.setVisible(true);
         this.dispose();
 
     }//GEN-LAST:event_customerEnterActionPerformed
 
+    private void setDate() {
+        // Create a Timer to update the label every second
+        javax.swing.Timer timer = new javax.swing.Timer(1000, e -> {
+            Date date = new Date();
+            SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+            lblCurrentDate.setText(df.format(date));
+        });
+        timer.start(); // Start the timer
+    }
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         LogInManagementForm managementlog = new LogInManagementForm();
         managementlog.setVisible(true);
@@ -935,14 +914,6 @@ public class MainPageForm extends javax.swing.JFrame {
         verify.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_AlreadyReservedButtonActionPerformed
-
-    private void WalkInDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WalkInDateActionPerformed
-
-    }//GEN-LAST:event_WalkInDateActionPerformed
-
-    private void WalkInStartTimeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_WalkInStartTimeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_WalkInStartTimeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -997,10 +968,8 @@ public class MainPageForm extends javax.swing.JFrame {
     private javax.swing.JPanel ReservationHandlingPanel;
     private javax.swing.JComboBox<String> ReservationStartTime;
     private javax.swing.JTextField SelectedDateDisplay;
-    private javax.swing.JTextField WalkInDate;
     private javax.swing.JComboBox<String> WalkInEndTime;
     private javax.swing.JSpinner WalkInPartySize;
-    private javax.swing.JTextField WalkInStartTime;
     private javax.swing.JTextField customerContactNoField;
     private javax.swing.JTextField customerEmailField;
     private javax.swing.JButton customerEnter;
@@ -1022,10 +991,7 @@ public class MainPageForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1035,12 +1001,14 @@ public class MainPageForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JLabel lblCurrentDate;
     // End of variables declaration//GEN-END:variables
 
     private void setVisible() {
