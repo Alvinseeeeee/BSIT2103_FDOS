@@ -45,24 +45,26 @@
                       <Group type="102" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="ConfirmSelectionButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="ConfirmSelectionButton" min="-2" pref="127" max="-2" attributes="0"/>
+                                      <Component id="ClearSelectionButton" max="32767" attributes="0"/>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="SubtotalField" min="-2" pref="69" max="-2" attributes="0"/>
+                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="SubtotalTxt" min="-2" pref="63" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
-                                  <Component id="TipField" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="ServiceChargeTxt" min="-2" pref="57" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="TotalField" min="-2" max="-2" attributes="0"/>
+                                  <Component id="TotalTxt" min="-2" pref="69" max="-2" attributes="0"/>
                               </Group>
-                              <Component id="jLabel8" alignment="0" min="-2" pref="521" max="-2" attributes="0"/>
+                              <Component id="jLabel8" min="-2" pref="521" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
@@ -82,21 +84,31 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="Desserts" min="-2" pref="491" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="SubtotalField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLabel3" alignment="3" max="32767" attributes="0"/>
-                              <Component id="TipField" alignment="3" max="-2" attributes="0"/>
-                              <Component id="jLabel4" alignment="3" max="32767" attributes="0"/>
-                              <Component id="jLabel7" alignment="3" max="32767" attributes="0"/>
-                              <Component id="TotalField" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="ConfirmSelectionButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLabel3" alignment="3" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jLabel7" alignment="3" pref="0" max="32767" attributes="0"/>
+                                      <Component id="TotalTxt" alignment="3" pref="0" max="32767" attributes="0"/>
+                                      <Component id="ServiceChargeTxt" alignment="3" pref="0" max="32767" attributes="0"/>
+                                      <Component id="jLabel4" alignment="3" pref="0" max="32767" attributes="0"/>
+                                      <Component id="SubtotalTxt" alignment="3" pref="0" max="32767" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="ConfirmSelectionButton" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="0" pref="10" max="32767" attributes="0"/>
+                              </Group>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
+                          <Component id="ClearSelectionButton" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel8" min="-2" pref="72" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
-                          <Component id="jScrollPane2" min="-2" pref="341" max="-2" attributes="0"/>
+                          <Component id="jScrollPane2" min="-2" pref="354" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jPanel7" max="32767" attributes="0"/>
                       </Group>
@@ -133,10 +145,14 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="527" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="410" max="32767" attributes="0"/>
+                          <Component id="jSpinner1" min="-2" pref="44" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace min="0" pref="13" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="21" max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="jPanel15" min="-2" max="-2" attributes="0"/>
@@ -150,14 +166,18 @@
                                   </Group>
                                   <Component id="jPanel14" min="-2" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace min="0" pref="12" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="20" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="460" max="32767" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace pref="384" max="32767" attributes="0"/>
+                          <Component id="jSpinner1" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                      </Group>
                       <Group type="103" rootIndex="1" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -207,12 +227,12 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel17" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="EscargotField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="AppetizerSpinner5" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="EscargotButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                           <Component id="jLabel14" alignment="0" min="-2" pref="60" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                                      <EmptySpace pref="14" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -232,7 +252,7 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="EscargotField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="AppetizerSpinner5" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="EscargotButton" min="-2" max="-2" attributes="0"/>
@@ -252,7 +272,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/image-108x102 (6).jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/image-108x102 (6).jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -291,16 +311,6 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EscargotButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="EscargotField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="EscargotFieldActionPerformed"/>
-                      </Events>
-                    </Component>
                     <Component class="javax.swing.JLabel" name="jLabel18">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -308,6 +318,8 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Bourguignonne"/>
                       </Properties>
+                    </Component>
+                    <Component class="javax.swing.JSpinner" name="AppetizerSpinner5">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -335,12 +347,12 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel36" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="BoneMarrowField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="Appetizer1Spinner" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="jLabel35" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                                           <Component id="MarrowButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                                      <EmptySpace pref="14" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -355,10 +367,10 @@
                                       <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel36" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="BoneMarrowField" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel36" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="Appetizer1Spinner" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="MarrowButton" min="-2" max="-2" attributes="0"/>
@@ -377,7 +389,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/image-108x102.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/image-108x102.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -416,15 +428,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MarrowButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="BoneMarrowField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BoneMarrowFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="Appetizer1Spinner">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -453,11 +457,11 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel38" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="QuinoaSaladField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="AppetizerSpinner3" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="QuinoaButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                                      <EmptySpace pref="14" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -474,8 +478,8 @@
                                       <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="QuinoaSaladField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="AppetizerSpinner3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="QuinoaButton" min="-2" max="-2" attributes="0"/>
@@ -494,7 +498,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/image-108x102 (4).jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/image-108x102 (4).jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -533,15 +537,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QuinoaButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="QuinoaSaladField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QuinoaSaladFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="AppetizerSpinner3">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -570,11 +566,11 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel42" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="ScallopField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="AppetizerSpinner2" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="ScallopsButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                                      <EmptySpace pref="15" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -591,8 +587,8 @@
                                       <Component id="jLabel41" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="ScallopField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="AppetizerSpinner2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="ScallopsButton" min="-2" max="-2" attributes="0"/>
@@ -611,7 +607,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/image-108x102 (2).jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/image-108x102 (2).jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -650,15 +646,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ScallopsButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="ScallopField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ScallopFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="AppetizerSpinner2">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -687,11 +675,11 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel46" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="TartareField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="AppetizerSpinner4" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="TartareButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="12" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -708,8 +696,8 @@
                                       <Component id="jLabel45" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="TartareField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel46" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="AppetizerSpinner4" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="TartareButton" min="-2" max="-2" attributes="0"/>
@@ -728,7 +716,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/image-108x102 (5).jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/image-108x102 (5).jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -767,18 +755,12 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TartareButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="TartareField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TartareFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="AppetizerSpinner4">
                     </Component>
                   </SubComponents>
                 </Container>
+                <Component class="javax.swing.JSpinner" name="jSpinner1">
+                </Component>
               </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel4">
@@ -813,7 +795,7 @@
                                   <Component id="jPanel23" min="-2" pref="240" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="16" max="32767" attributes="0"/>
+                          <EmptySpace pref="32" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -853,18 +835,18 @@
                               <Component id="jLabel52" min="-2" pref="108" max="-2" attributes="0"/>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="jLabel53" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLabel53" alignment="0" pref="107" max="32767" attributes="0"/>
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel54" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                          <Component id="MusselsButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel55" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="MusselsField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="EntreeSpinner1" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jLabel54" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                          <Component id="MusselsButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -880,10 +862,10 @@
                                       <Component id="jLabel53" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel54" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel55" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="MusselsField" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel55" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="EntreeSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="MusselsButton" min="-2" max="-2" attributes="0"/>
@@ -902,7 +884,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/steamedmussels.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/steamedmussels.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -941,15 +923,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MusselsButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="MusselsField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="MusselsFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="EntreeSpinner1">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -978,7 +952,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel59" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="TomahawkField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="EntreeSpinner3" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="TomahawkButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
@@ -998,11 +972,11 @@
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel58" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="TomahawkField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel59" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel59" min="-2" max="-2" attributes="0"/>
+                                          <Component id="EntreeSpinner3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                       <Component id="TomahawkButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel56" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
@@ -1019,7 +993,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/tomahawk.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/tomahawk.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1058,15 +1032,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TomahawkButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="TomahawkField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TomahawkFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="EntreeSpinner3">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1095,11 +1061,11 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel63" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PenneVodkaField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="EntreeSpinner2" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="PenneVodkaButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                                      <EmptySpace pref="15" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1116,8 +1082,8 @@
                                       <Component id="jLabel62" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="PenneVodkaField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel63" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="EntreeSpinner2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="PenneVodkaButton" min="-2" max="-2" attributes="0"/>
@@ -1136,7 +1102,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/pennevodka.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/pennevodka.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1175,15 +1141,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PenneVodkaButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="PenneVodkaField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PenneVodkaFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="EntreeSpinner2">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1212,7 +1170,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel67" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="GallianoField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="EntreeSpinner4" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="GallianoButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
@@ -1233,8 +1191,8 @@
                                       <Component id="jLabel66" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="GallianoField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel67" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="EntreeSpinner4" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="GallianoButton" min="-2" max="-2" attributes="0"/>
@@ -1253,7 +1211,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/chickengallianp.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/chickengallianp.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1292,15 +1250,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GallianoButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="GallianoField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="GallianoFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="EntreeSpinner4">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1329,11 +1279,11 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel71" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="SalmonField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="EntreeSpinner5" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="SalmonButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                                      <EmptySpace pref="14" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1350,8 +1300,8 @@
                                       <Component id="jLabel70" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="SalmonField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel71" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="EntreeSpinner5" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="SalmonButton" min="-2" max="-2" attributes="0"/>
@@ -1370,7 +1320,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/salmon.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/salmon.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1409,15 +1359,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SalmonButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="SalmonField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SalmonFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="EntreeSpinner5">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1455,7 +1397,7 @@
                                   <Component id="jPanel27" min="-2" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="15" max="32767" attributes="0"/>
+                          <EmptySpace pref="31" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1496,17 +1438,17 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel73" alignment="0" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel74" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                                          <Component id="CremeBruleeButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel75" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="CremeBruleeField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="DessertSpinner1" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jLabel74" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
-                                          <Component id="CremeBruleeButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -1522,10 +1464,10 @@
                                       <Component id="jLabel73" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel74" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="jLabel75" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="CremeBruleeField" alignment="1" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLabel75" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="DessertSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Component id="CremeBruleeButton" min="-2" max="-2" attributes="0"/>
@@ -1544,7 +1486,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/cremebrulee.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/cremebrulee.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1583,15 +1525,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CremeBruleeButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="CremeBruleeField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CremeBruleeFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="DessertSpinner1">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1620,11 +1554,11 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel79" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="Profiteroles" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="DessertSpinner2" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="ProfiterolesButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                                      <EmptySpace pref="15" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1641,8 +1575,8 @@
                                       <Component id="jLabel78" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="Profiteroles" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel79" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="DessertSpinner2" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="ProfiterolesButton" min="-2" max="-2" attributes="0"/>
@@ -1661,7 +1595,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/profiteroles.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/profiteroles.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1700,15 +1634,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ProfiterolesButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="Profiteroles">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ProfiterolesActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="DessertSpinner2">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1737,11 +1663,11 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel83" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="TiramisuField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="DessertSpinner4" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="TiramisuButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                                      <EmptySpace pref="15" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1758,8 +1684,8 @@
                                       <Component id="jLabel82" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="TiramisuField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel83" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="DessertSpinner4" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="TiramisuButton" min="-2" max="-2" attributes="0"/>
@@ -1778,7 +1704,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/tiramisu.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/tiramisu.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1817,15 +1743,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TiramisuButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="TiramisuField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TiramisuFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="DessertSpinner4">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1854,7 +1772,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel87" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PavlovaField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="DessertSpinner3" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="PavlovaButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
@@ -1875,8 +1793,8 @@
                                       <Component id="jLabel86" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="PavlovaField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel87" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="DessertSpinner3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="PavlovaButton" min="-2" max="-2" attributes="0"/>
@@ -1895,7 +1813,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/pavlova.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/pavlova.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -1934,15 +1852,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PavlovaButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="PavlovaField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PavlovaFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="DessertSpinner3">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -1971,11 +1881,11 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel91" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="LemonTartField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="DessertSpinner5" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                           <Component id="LemonTartButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace pref="12" max="32767" attributes="0"/>
+                                      <EmptySpace pref="14" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -1992,8 +1902,8 @@
                                       <Component id="jLabel90" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="LemonTartField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel91" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="DessertSpinner5" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="LemonTartButton" min="-2" max="-2" attributes="0"/>
@@ -2012,7 +1922,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/lemontart.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/lemontart.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2051,15 +1961,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LemonTartButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="LemonTartField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="LemonTartFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="DessertSpinner5">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2083,7 +1985,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="15" max="32767" attributes="0"/>
+                          <EmptySpace pref="31" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -2106,11 +2008,11 @@
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="31" max="32767" attributes="0"/>
+                          <EmptySpace pref="39" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="1" attributes="0">
-                                      <Component id="jPanel35" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jPanel35" min="-2" pref="115" max="-2" attributes="0"/>
                                       <Component id="jPanel30" min="-2" pref="120" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -2145,13 +2047,13 @@
                                   <Component id="jLabel112" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="PiemonteButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                                          <Component id="jLabel94" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel95" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="PiemonteField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="BeverageSpinner1" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="PiemonteButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <Component id="jLabel94" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -2173,10 +2075,10 @@
                                       <Component id="jLabel94" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="PiemonteField" alignment="3" min="-2" max="-2" attributes="0"/>
                                           <Component id="jLabel95" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="BeverageSpinner1" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace max="32767" attributes="0"/>
+                                      <EmptySpace pref="9" max="32767" attributes="0"/>
                                       <Component id="PiemonteButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel92" min="-2" pref="102" max="-2" attributes="0"/>
@@ -2193,7 +2095,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/piemento.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/piemento.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2232,16 +2134,6 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PiemonteButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="PiemonteField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PiemonteFieldActionPerformed"/>
-                      </Events>
-                    </Component>
                     <Component class="javax.swing.JLabel" name="jLabel112">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2249,6 +2141,8 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="2016"/>
                       </Properties>
+                    </Component>
+                    <Component class="javax.swing.JSpinner" name="BeverageSpinner1">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2274,8 +2168,8 @@
                                           <Component id="jLabel115" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel116" min="-2" pref="49" max="-2" attributes="0"/>
-                                              <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="AperolField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="BeverageSpinner2" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -2295,16 +2189,16 @@
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="jLabel115" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="AperolField" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel116" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel116" min="-2" max="-2" attributes="0"/>
+                                          <Component id="BeverageSpinner2" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
                                       <Component id="AperolButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel113" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="7" max="32767" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2316,7 +2210,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/aperol.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/aperol.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2355,15 +2249,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AperolButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="AperolField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AperolFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="BeverageSpinner2">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2390,7 +2276,7 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel121" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="IcedTeaField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="BeverageSpinner3" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -2417,7 +2303,7 @@
                                       <EmptySpace max="32767" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel121" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="IcedTeaField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="BeverageSpinner3" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="IcedTeaButton" min="-2" max="-2" attributes="0"/>
@@ -2435,7 +2321,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/icedtea.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/icedtea.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2474,15 +2360,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IcedTeaButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="IcedTeaField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IcedTeaFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="BeverageSpinner3">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2502,15 +2380,15 @@
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="jLabel124" alignment="0" pref="107" max="32767" attributes="0"/>
-                                  <Group type="102" alignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="OldCubanButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
+                                          <Component id="jLabel125" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel126" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="OldCubanField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="BeverageSpinner4" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="OldCubanButton" alignment="0" min="-2" pref="58" max="-2" attributes="0"/>
-                                          <Component id="jLabel125" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                   </Group>
@@ -2535,7 +2413,7 @@
                                       <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="3" attributes="0">
                                           <Component id="jLabel126" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="OldCubanField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="BeverageSpinner4" alignment="3" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Component id="OldCubanButton" min="-2" max="-2" attributes="0"/>
@@ -2553,7 +2431,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/oldcuban.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/oldcuban.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2592,15 +2470,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OldCubanButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="OldCubanField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="OldCubanFieldActionPerformed"/>
-                      </Events>
+                    <Component class="javax.swing.JSpinner" name="BeverageSpinner4">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2628,10 +2498,10 @@
                                           <Group type="102" alignment="0" attributes="0">
                                               <Component id="jLabel131" min="-2" pref="49" max="-2" attributes="0"/>
                                               <EmptySpace max="-2" attributes="0"/>
-                                              <Component id="VermentinoField" min="-2" pref="46" max="-2" attributes="0"/>
+                                              <Component id="BeverageSpinner5" min="-2" pref="44" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
@@ -2649,17 +2519,17 @@
                                       <Component id="jLabel132" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="jLabel130" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jLabel131" alignment="3" min="-2" max="-2" attributes="0"/>
-                                          <Component id="VermentinoField" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel131" min="-2" max="-2" attributes="0"/>
+                                          <Component id="BeverageSpinner5" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Component id="VermenetinoButton" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jLabel128" alignment="0" min="-2" pref="102" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="9" max="32767" attributes="0"/>
+                              <EmptySpace pref="7" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -2671,7 +2541,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/vermentino.jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/vermentino.jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2710,16 +2580,6 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VermenetinoButtonActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JTextField" name="VermentinoField">
-                      <Properties>
-                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                          <Font name="Century Gothic" size="12" style="0"/>
-                        </Property>
-                      </Properties>
-                      <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="VermentinoFieldActionPerformed"/>
-                      </Events>
-                    </Component>
                     <Component class="javax.swing.JLabel" name="jLabel132">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -2727,6 +2587,8 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="2021"/>
                       </Properties>
+                    </Component>
+                    <Component class="javax.swing.JSpinner" name="BeverageSpinner5">
                     </Component>
                   </SubComponents>
                 </Container>
@@ -2817,7 +2679,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/image-108x102 (9).jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/image-108x102 (9).jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -2920,7 +2782,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/image-108x102 (1).jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/image-108x102 (1).jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -3025,7 +2887,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/image-108x102 (8).jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/image-108x102 (8).jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -3128,7 +2990,7 @@
                           <Font name="Century Gothic" size="12" style="0"/>
                         </Property>
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                          <Image iconType="3" name="/images/image-108x102 (7).jpg"/>
+                          <Image iconType="3" name="/BSIT2103_FDOS/images/image-108x102 (7).jpg"/>
                         </Property>
                       </Properties>
                     </Component>
@@ -3195,21 +3057,6 @@
                     </Constraint>
                   </Constraints>
                 </Component>
-                <Component class="javax.swing.JTextField" name="FixePrieField">
-                  <Properties>
-                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                      <Font name="Century Gothic" size="12" style="0"/>
-                    </Property>
-                  </Properties>
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="FixePrieFieldActionPerformed"/>
-                  </Events>
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="90" y="360" width="46" height="-1"/>
-                    </Constraint>
-                  </Constraints>
-                </Component>
                 <Component class="javax.swing.JLabel" name="jLabel133">
                   <Properties>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -3236,6 +3083,18 @@
                     </Constraint>
                   </Constraints>
                 </Component>
+                <Component class="javax.swing.JSpinner" name="FixePrieSpinner">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Century Gothic" size="12" style="0"/>
+                    </Property>
+                  </Properties>
+                  <Constraints>
+                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                      <AbsoluteConstraints x="80" y="360" width="-1" height="-1"/>
+                    </Constraint>
+                  </Constraints>
+                </Component>
               </SubComponents>
             </Container>
           </SubComponents>
@@ -3258,7 +3117,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="CashButton" min="-2" pref="69" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="CreditCardButton" pref="75" max="32767" attributes="0"/>
+                              <Component id="CreditCardButton" max="32767" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="ChequeButton" min="-2" pref="71" max="-2" attributes="0"/>
                           </Group>
@@ -3460,13 +3319,13 @@
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel2" alignment="3" pref="41" max="32767" attributes="0"/>
-                          <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -3522,63 +3381,68 @@
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Century Gothic" size="10" style="0"/>
+              <Font name="Century Gothic" size="12" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="SUBTOTAL"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="TipField">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Century Gothic" size="10" style="0"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TipFieldActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel4">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Century Gothic" size="10" style="0"/>
+              <Font name="Century Gothic" size="12" style="0"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="TIP"/>
+            <Property name="text" type="java.lang.String" value="Service Charge"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel7">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Century Gothic" size="10" style="0"/>
+              <Font name="Century Gothic" size="12" style="0"/>
             </Property>
             <Property name="text" type="java.lang.String" value="TOTAL"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="SubtotalField">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Century Gothic" size="10" style="0"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SubtotalFieldActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JTextField" name="TotalField">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Century Gothic" size="10" style="0"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TotalFieldActionPerformed"/>
-          </Events>
-        </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/images/footerbg_1.jpg"/>
+              <Image iconType="3" name="/BSIT2103_FDOS/images/footerbg_1.jpg"/>
             </Property>
           </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="ServiceChargeTxt">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century Gothic" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="0.0"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="SubtotalTxt">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century Gothic" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="0.0"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="TotalTxt">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century Gothic" size="12" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="0.0"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="ClearSelectionButton">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Century Gothic" size="10" style="0"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="CLEAR"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ClearSelectionButtonActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
